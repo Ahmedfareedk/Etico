@@ -8,15 +8,15 @@
 
     <LinearLayout
         android:id="@+id/layout_track_wire_rope_root"
-        android:layout_width="220dp"
-        android:layout_height="170dp"
+        android:layout_width="@dimen/_170sdp"
+        android:layout_height="@dimen/_120sdp"
         android:gravity="center"
         android:clickable="true"
         android:background="@drawable/buttons_background"
         android:orientation="vertical"
         android:paddingTop="10dp"
-        android:paddingBottom="8dp"
-        android:layout_marginTop="64dp"
+        android:paddingBottom="4dp"
+        android:layout_marginTop="72dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -35,6 +35,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/ubuntu_bold"
             android:text="@string/track"
+            android:layout_marginTop="@dimen/_8sdp"
             android:textColor="@color/colorTextTitle"
             android:textSize="@dimen/textTitleSize" />
 
@@ -42,15 +43,16 @@
 
     <LinearLayout
         android:id="@+id/layout_request_quotation_wire_rope_root"
-        android:layout_width="220dp"
-        android:layout_height="170dp"
+        android:layout_width="@dimen/_170sdp"
+        android:layout_height="@dimen/_120sdp"
         android:gravity="center"
+
         android:background="@drawable/buttons_background"
         android:orientation="vertical"
         android:paddingStart="8dp"
         android:paddingEnd="8dp"
         android:paddingTop="10dp"
-        android:paddingBottom="8dp"
+        android:paddingBottom="4dp"
         android:layout_marginTop="64dp"
         app:layout_constraintStart_toStartOf="@id/layout_track_wire_rope_root"
         app:layout_constraintTop_toBottomOf="@id/layout_track_wire_rope_root"
@@ -63,7 +65,8 @@
             android:scaleType="centerCrop"
             android:layout_gravity="center_horizontal"
             android:contentDescription="@string/app_name"
-            android:src="@drawable/ic_quotation" />
+            app:srcCompat ="@drawable/ic_quotation"
+            />
 
         <TextView
             android:id="@+id/request_quotation_text_view_wire_rope"

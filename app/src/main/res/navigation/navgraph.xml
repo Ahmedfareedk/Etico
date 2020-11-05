@@ -25,20 +25,20 @@
         android:label="fragment_shackle_hook"
         tools:layout="@layout/fragment_shackle_hook" />
     <navigation android:id="@+id/navigation"
-        app:startDestination="@id/cranesFragment">
+        app:startDestination="@id/industrialFragment">
         <fragment
-            android:id="@+id/cranesFragment"
-            android:name="com.example.etico.ui.cranes.CranesFragment"
+            android:id="@+id/industrialFragment"
+            android:name="com.example.etico.ui.cranes.IndustrialFragment"
             android:label="fragment_cranes"
-            tools:layout="@layout/fragment_cranes" >
+            tools:layout="@layout/fragment_industrial" >
             <action
                 android:id="@+id/action_cranesFragment_to_pilingFragment"
-                app:destination="@id/pilingFragment" />
+                app:destination="@id/constructionFragment" />
         </fragment>
         <fragment
-            android:id="@+id/pilingFragment"
-            android:name="com.example.etico.ui.piling.PilingFragment"
+            android:id="@+id/constructionFragment"
+            android:name="com.example.etico.ui.piling.ConstructionFragment"
             android:label="fragment_piling"
-            tools:layout="@layout/fragment_piling" />
+            tools:layout="@layout/fragment_construction" />
     </navigation>
 </navigation>

@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@color/colorPrimaryDark"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.piling.PilingFragment">
+    tools:context=".ui.piling.ConstructionFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
