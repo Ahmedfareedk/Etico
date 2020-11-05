@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="textTitleSize">@dimen/_16ssp</dimen>
+    <dimen name="rfqTextSize">@dimen/_16ssp</dimen>
+</resources>

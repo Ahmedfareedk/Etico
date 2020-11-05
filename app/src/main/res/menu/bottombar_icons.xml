@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/wireRopeFragment"
+        android:icon="@drawable/wire_rope"
+        android:title="@string/wire_rope"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/SLingFragment"
+        android:icon="@drawable/ic_sling"
+        android:title="@string/sling"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/shackleHookFragment"
+        android:icon="@drawable/ic_hook"
+        android:title="@string/shackles_hooks"
+        app:showAsAction="ifRoom" />
+</menu>
