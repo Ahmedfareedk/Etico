@@ -9,4 +9,7 @@ public class HandleBottomNavView {
     public static void hideBottomNavigationView(BottomNavigationView navigationView){
         navigationView.setVisibility(View.GONE);
     }
+    public static void showBottomNavigationView(BottomNavigationView navigationView){
+        navigationView.setVisibility(View.VISIBLE);
+    }
 }

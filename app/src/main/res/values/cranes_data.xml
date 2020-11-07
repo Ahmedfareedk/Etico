@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="industrial_images">
+        <item>@drawable/overhead_plus</item>
+        <item>@drawable/steel_ladle</item>
+        <item>@drawable/steel_blast</item>
+        <item>@drawable/rolling</item>
+
+    </integer-array>
+
+    <string-array name="industrial_cranes_names">
+        <item>Overhead Hoist</item>
+        <item>Steel Works Ladle/Charging Cranes</item>
+        <item>Steel Works Blast</item>
+        <item>Cold Rolling/Looper Car</item>
+    </string-array>
+</resources>

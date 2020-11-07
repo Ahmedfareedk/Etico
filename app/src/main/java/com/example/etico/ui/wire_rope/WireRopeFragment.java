@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.example.etico.R;
 
@@ -26,6 +27,7 @@ public class WireRopeFragment extends Fragment {
         track.setOnClickListener(view1 -> {
             Navigation.findNavController(view).navigate(R.id.action_wireRopeFragment_to_navigation);
         });
+        
 
         return view;
     }
