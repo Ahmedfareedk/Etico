@@ -1,24 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryDark"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.piling.ConstructionFragment">
+    tools:context=".ui.construction.ConstructionFragment"
+    android:paddingBottom="@dimen/_8sdp">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="wrap_content"
+   <!-- <TextView
+        android:id="@+id/category_title_tv"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Piling Data Will Be Shown Here!"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_8sdp"
         android:fontFamily="@font/ubuntu_bold"
         android:textSize="@dimen/_16sdp"
-        android:textColor="@color/colorWhite"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        tools:text="Crawler Cranes" />
+
+    <View
+        android:id="@+id/title_separator"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:background="@color/colorUnchecked"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/category_title_tv"
+        app:layout_constraintTop_toBottomOf="@id/category_title_tv" />-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/main_construction_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:paddingBottom="@dimen/_8sdp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:listitem="@layout/construction_cranes_view_item" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

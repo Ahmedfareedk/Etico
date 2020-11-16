@@ -10,32 +10,33 @@
         android:id="@+id/layout_track_wire_rope_root"
         android:layout_width="@dimen/_170sdp"
         android:layout_height="@dimen/_120sdp"
-        android:gravity="center"
+        android:layout_marginTop="@dimen/_48sdp"
+        android:background="@drawable/buttons_background_with_ripple"
         android:clickable="true"
-        android:background="@drawable/buttons_background"
+        android:gravity="center"
         android:orientation="vertical"
-        android:paddingTop="10dp"
-        android:paddingBottom="4dp"
-        android:layout_marginTop="72dp"
+        android:paddingTop="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_4sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-     >
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/track_icon_wire_rope"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:contentDescription="@string/app_name"
-            android:src="@drawable/ic_track"/>
+            app:srcCompat="@drawable/track"
+            app:tint="@color/colorIcons" />
 
         <TextView
             android:id="@+id/track_text_view_wire_rope"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
             android:fontFamily="@font/ubuntu_bold"
             android:text="@string/track"
-            android:layout_marginTop="@dimen/_8sdp"
             android:textColor="@color/colorTextTitle"
             android:textSize="@dimen/textTitleSize" />
 
@@ -45,34 +46,34 @@
         android:id="@+id/layout_request_quotation_wire_rope_root"
         android:layout_width="@dimen/_170sdp"
         android:layout_height="@dimen/_120sdp"
+        android:layout_marginTop="64dp"
+        android:background="@drawable/buttons_background_with_ripple"
+        android:clickable="true"
         android:gravity="center"
-
-        android:background="@drawable/buttons_background"
         android:orientation="vertical"
         android:paddingStart="8dp"
-        android:paddingEnd="8dp"
         android:paddingTop="10dp"
+        android:paddingEnd="8dp"
         android:paddingBottom="4dp"
-        android:layout_marginTop="64dp"
         app:layout_constraintStart_toStartOf="@id/layout_track_wire_rope_root"
-        app:layout_constraintTop_toBottomOf="@id/layout_track_wire_rope_root"
-        >
+        app:layout_constraintTop_toBottomOf="@id/layout_track_wire_rope_root">
 
         <ImageView
             android:id="@+id/request_quotation_icon_wire_rope"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:scaleType="centerCrop"
-            android:layout_gravity="center_horizontal"
+            android:layout_gravity="center"
             android:contentDescription="@string/app_name"
-            app:srcCompat ="@drawable/ic_quotation"
-            />
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/quotation"
+            app:tint="@color/colorIcons" />
 
         <TextView
             android:id="@+id/request_quotation_text_view_wire_rope"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_8sdp"
             android:fontFamily="@font/ubuntu_bold"
             android:text="@string/request_quotation"
             android:textAllCaps="false"

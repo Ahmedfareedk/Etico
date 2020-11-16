@@ -8,14 +8,14 @@
         app:showAsAction="ifRoom" />
 
     <item
-        android:id="@+id/SLingFragment"
-        android:icon="@drawable/ic_sling"
+        android:id="@+id/sLingFragment"
+        android:icon="@drawable/sling"
         android:title="@string/sling"
         app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/shackleHookFragment"
-        android:icon="@drawable/ic_hook"
+        android:icon="@drawable/hook"
         android:title="@string/shackles_hooks"
         app:showAsAction="ifRoom" />
 </menu>

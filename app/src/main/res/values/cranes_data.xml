@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="industrial_cranes_names">
+        <item>Overhead Hoist</item>
+        <item>Steel Works Ladle/Charging Cranes</item>
+        <item>Steel Works Blast</item>
+        <item>Cold Rolling/Looper Car</item>
+    </string-array>
+
+    <integer-array name="industrial_images">
+        <item>@drawable/overhead</item>
+        <item>@drawable/steel_ladle</item>
+        <item>@drawable/steel_blast</item>
+        <item>@drawable/rolling</item>
+
+    </integer-array>
+
+
+
+   <!-- construction cranes data-->
+
+    <string-array name="construction_cranes_categories">
+        <item>Crawler Cranes</item>
+        <item>Foundation Works</item>
+        <item>Tower Cranes</item>
+        <item>Telescopic Mobile Cranes</item>
+        <item>Truck Mounted Cranes</item>
+    </string-array>
+
+
+
+
+
+    <string-array name="crawler_cranes">
+        <item>Lattice Boom Crane</item>
+    </string-array>
+
+
+    <!--crawler_cranes images-->
+
+    <string-array name="truck_mounted_cranes">
+        <item>Truck Mounted Crane</item>
+    </string-array>
+
+    <string-array name="foundation_works">
+        <item>Rotary Drilling Crane</item>
+        <item>Piling Crane</item>
+        <item>Diaphram Walling</item>
+    </string-array>
+
+    <!--foundation cranes images-->
+
+    <string-array name="tower_cranes">
+        <item>Flat Top Crane</item>
+        <item>High Top Crane</item>
+        <item>Luffing Crane</item>
+        <item>Derrick Crane</item>
+        <item>Heavy Load Crane</item>
+    </string-array>
+
+    <!--tower_cranes images-->
+
+
+    <string-array name="telescopic_mobile_cranes">
+        <item>All Terrain Crane</item>
+        <item>Telescopic Crane</item>
+        <item>Rough Terrain Crane</item>
+    </string-array>
+
+    <!--telescopic_mobile_cranes images-->
+
+</resources>

@@ -2,4 +2,5 @@
 <resources>
     <dimen name="textTitleSize">@dimen/_16ssp</dimen>
     <dimen name="rfqTextSize">@dimen/_16ssp</dimen>
+    <dimen name="cranesItemTextSize">@dimen/_14ssp</dimen>
 </resources>

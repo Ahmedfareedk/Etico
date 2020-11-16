@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_90sdp"
+    android:layout_marginStart="@dimen/_8sdp"
+    android:layout_marginTop="@dimen/_8sdp"
+    android:layout_marginEnd="@dimen/_8sdp"
+    app:cardBackgroundColor="@color/colorCardViewBackground"
+    app:cardCornerRadius="@dimen/_8sdp"
+    app:strokeColor="@color/cardViewStrokeColor"
+    app:strokeWidth="@dimen/_1sdp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/industrial_card_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/_8sdp"
+        android:paddingStart="@dimen/_8sdp">
+
+        <ImageView
+            android:id="@+id/industrial_crane_image_view"
+            android:layout_width="@dimen/_64sdp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:contentDescription="@string/app_name"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@drawable/track"
+           />
+
+        <TextView
+            android:id="@+id/industrial_crane_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:fontFamily="@font/ubuntu_bold"
+            android:gravity="start"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:textColor="@color/colorTextTitle"
+            android:textSize="@dimen/cranesItemTextSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/industrial_crane_image_view"
+            app:layout_constraintStart_toEndOf="@id/industrial_crane_image_view"
+            app:layout_constraintTop_toTopOf="@id/industrial_crane_image_view"
+            tools:text="Cranes" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
