@@ -4,8 +4,10 @@
     <color name="colorPrimaryDark">#1E88E5</color>
     <color name="colorAccent">#015495</color>
 
-    <color name="colorIcons">#01579B</color>
+    <color name="colorIcons">#740A13</color>
     <color name="colorWhite">#fbfbfb</color>
+    <color name="colorCardViewBackground">#F5F5F5</color>
     <color name="colorUnchecked">#8C8C8C</color>
-    <color name="colorTextTitle">#17202A</color>
+    <color name="colorTextTitle">#1B1B1B</color>
+    <color name="cardViewStrokeColor">#1B1B1B</color>
 </resources>

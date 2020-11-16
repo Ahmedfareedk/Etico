@@ -11,11 +11,11 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.etico.R;
 import com.example.etico.model.Crane;
-import com.google.android.material.card.MaterialCardView;
+
 import java.util.List;
 
 public class IndustrialCranesAdapter extends RecyclerView.Adapter<IndustrialCranesAdapter.IndustrialCranesViewHolder> {
-    private List<Crane> industrialCranesList;
+    private final List<Crane> industrialCranesList;
 
     public IndustrialCranesAdapter(List<Crane> industrialCranesList) {
         this.industrialCranesList = industrialCranesList;
@@ -24,7 +24,7 @@ public class IndustrialCranesAdapter extends RecyclerView.Adapter<IndustrialCran
     @NonNull
     @Override
     public IndustrialCranesViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.industrial_crane_item, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.crane_item, parent, false);
 
         return new IndustrialCranesViewHolder(view);
     }
@@ -52,8 +52,6 @@ public class IndustrialCranesAdapter extends RecyclerView.Adapter<IndustrialCran
                 Toast.makeText(itemView.getContext(), "Clicked", Toast.LENGTH_SHORT).show();
             });
         }
-
-
         private void setCranesItems(Crane crane){
             craneTitle.setText(crane.getCraneTitle());
             craneImage.setImageResource(crane.getCraneImage());

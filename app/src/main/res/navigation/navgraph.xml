@@ -27,7 +27,7 @@
         android:label="fragment_shackle_hook"
         tools:layout="@layout/fragment_shackle_hook" />
     <navigation android:id="@+id/navigation"
-        app:startDestination="@id/industrialFragment">
+        app:startDestination="@id/constructionFragment">
         <fragment
             android:id="@+id/industrialFragment"
             android:name="com.example.etico.ui.industrial.IndustrialFragment"

@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         bottomNavigationView = findViewById(R.id.main_nav_view);
         mainToolbar = findViewById(R.id.main_toolbar);
-
         mainToolbar.setTitle("Etico");
         setSupportActionBar(mainToolbar);
 

@@ -7,6 +7,7 @@ public class Crane {
     public Crane() {
     }
 
+
     public Crane(String craneTitle, int craneImage) {
         this.craneTitle = craneTitle;
         this.craneImage = craneImage;
@@ -27,6 +28,5 @@ public class Crane {
     public void setCraneImage(int craneImage) {
         this.craneImage = craneImage;
     }
-
-
 }
+

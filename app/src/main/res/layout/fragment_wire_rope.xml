@@ -27,7 +27,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:contentDescription="@string/app_name"
-            app:srcCompat="@drawable/track" />
+            app:srcCompat="@drawable/track"
+            app:tint="@color/colorIcons" />
 
         <TextView
             android:id="@+id/track_text_view_wire_rope"
@@ -64,7 +65,8 @@
             android:layout_gravity="center"
             android:contentDescription="@string/app_name"
             android:scaleType="centerCrop"
-            app:srcCompat="@drawable/quotation" />
+            app:srcCompat="@drawable/quotation"
+            app:tint="@color/colorIcons" />
 
         <TextView
             android:id="@+id/request_quotation_text_view_wire_rope"
