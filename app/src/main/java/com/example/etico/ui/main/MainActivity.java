@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         bottomNavigationView = findViewById(R.id.main_nav_view);
         mainToolbar = findViewById(R.id.main_toolbar);
-        mainToolbar.setTitle("Etico");
+       // mainToolbar.setTitle("Sling Force");
         setSupportActionBar(mainToolbar);
 
 
@@ -34,9 +34,19 @@ public class MainActivity extends AppCompatActivity {
                 HandleBottomNavView.showBottomNavigationView(bottomNavigationView);
             } else HandleBottomNavView.hideBottomNavigationView(bottomNavigationView);
 
+            if (destination.getId() == R.id.industrialFragment) {
+                mainToolbar.setTitle(R.string.industrialCranes);
+            } else if (destination.getId() == R.id.constructionFragment) {
+                mainToolbar.setTitle(R.string.constructionCranes);
+            } else if (destination.getId() == R.id.portMaritimeFragment) {
+                mainToolbar.setTitle(R.string.portMaritime);
+            } else {
+                mainToolbar.setTitle(R.string.slingForce);
+            }
+
 
         });
 
-
     }
+
 }

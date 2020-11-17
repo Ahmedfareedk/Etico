@@ -7,13 +7,10 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="TabTheme">
-        <item name="android:textSize">@dimen/_14sdp</item>
-        <item name="android:textStyle">normal</item>
-        <item name="android:textAllCaps">true</item>
+    <style name="toolbar_theme" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:textSize">@dimen/_20sdp</item>
         <item name="android:fontFamily">@font/ubuntu_bold</item>
-        <item name="android:textColor">@color/tabs_tint</item>
-        <item name="android:includeFontPadding">false</item>
 
     </style>
+
 </resources>

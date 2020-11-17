@@ -27,21 +27,21 @@
         android:label="fragment_shackle_hook"
         tools:layout="@layout/fragment_shackle_hook" />
     <navigation android:id="@+id/navigation"
-        app:startDestination="@id/constructionFragment">
+        app:startDestination="@id/portMaritimeFragment">
         <fragment
             android:id="@+id/industrialFragment"
             android:name="com.example.etico.ui.industrial.IndustrialFragment"
-            android:label="fragment_cranes"
+            android:label="Title: {Industrial Cranes}"
             tools:layout="@layout/fragment_industrial" />
         <fragment
             android:id="@+id/constructionFragment"
             android:name="com.example.etico.ui.construction.ConstructionFragment"
-            android:label="fragment_piling"
+            android:label="Title: {Construction Cranes}"
             tools:layout="@layout/fragment_construction" />
         <fragment
             android:id="@+id/portMaritimeFragment"
             android:name="com.example.etico.ui.port_maritime.PortMaritimeFragment"
-            android:label="fragment_port_m_aaritime"
+            android:label="Title: {Maritime}"
             tools:layout="@layout/fragment_port_m_aaritime" />
     </navigation>
 </navigation>
