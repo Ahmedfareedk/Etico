@@ -9,5 +9,7 @@
     <color name="colorCardViewBackground">#F5F5F5</color>
     <color name="colorUnchecked">#8C8C8C</color>
     <color name="colorTextTitle">#1B1B1B</color>
+    <color name="colorMainTitleText">#8C8C8C</color>
+
     <color name="cardViewStrokeColor">#1B1B1B</color>
 </resources>

@@ -68,7 +68,7 @@ public class PortMaritimeFragment extends Fragment {
         for(int i = 0; i < portMaritimeCranesMainTitles.length; i++){
             craneItem = new ArrayList<>();
             for(int j =0; j < portMariTimeStringsListToBind.get(i).size(); j++){
-                craneItem.add(j, new Crane(portMariTimeStringsListToBind.get(i).get(j), R.drawable.drilling));
+                craneItem.add(j, new Crane(portMariTimeStringsListToBind.get(i).get(j), R.drawable.pedestal));
             }
             listModel.add(i, new ConstructionModel(portMaritimeCranesMainTitles[i], craneItem));
         }
