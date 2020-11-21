@@ -11,10 +11,11 @@
         android:label="fragment_wire_rope"
         tools:layout="@layout/fragment_wire_rope" >
         <action
-            android:id="@+id/action_wireRopeFragment_to_navigation"
-            app:destination="@id/navigation"
-            app:enterAnim="@anim/fragment_open_enter"
-            app:exitAnim="@anim/fragment_open_exit" />
+            android:id="@+id/action_wireRopeFragment_to_viewPagerFragment"
+            app:destination="@id/viewPagerFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:popUpTo="@id/wireRopeFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/sLingFragment"
@@ -26,22 +27,16 @@
         android:name="com.example.etico.ui.shackle_hook.ShackleHookFragment"
         android:label="fragment_shackle_hook"
         tools:layout="@layout/fragment_shackle_hook" />
-    <navigation android:id="@+id/navigation"
-        app:startDestination="@id/constructionFragment">
-        <fragment
-            android:id="@+id/industrialFragment"
-            android:name="com.example.etico.ui.industrial.IndustrialFragment"
-            android:label="fragment_cranes"
-            tools:layout="@layout/fragment_industrial" />
-        <fragment
-            android:id="@+id/constructionFragment"
-            android:name="com.example.etico.ui.construction.ConstructionFragment"
-            android:label="fragment_piling"
-            tools:layout="@layout/fragment_construction" />
-        <fragment
-            android:id="@+id/portMaritimeFragment"
-            android:name="com.example.etico.ui.port_maritime.PortMaritimeFragment"
-            android:label="fragment_port_m_aaritime"
-            tools:layout="@layout/fragment_port_m_aaritime" />
-    </navigation>
+    <fragment
+        android:id="@+id/viewPagerFragment"
+        android:name="com.example.etico.ui.view_pager_fragment.ViewPagerFragment"
+        android:label="fragment_view_pager"
+        tools:layout="@layout/fragment_view_pager" >
+        <action
+            android:id="@+id/action_viewPagerFragment_to_wireRopeFragment"
+            app:destination="@id/wireRopeFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:popUpTo="@id/viewPagerFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
 </navigation>

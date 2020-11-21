@@ -28,12 +28,13 @@
     </string-array>
 
 
-
-
-
     <string-array name="crawler_cranes">
         <item>Lattice Boom Crane</item>
     </string-array>
+
+    <integer-array name="crawler_cranes_icons">
+        <item>@drawable/lattice_boom</item>
+    </integer-array>
 
 
     <!--crawler_cranes images-->
@@ -42,13 +43,22 @@
         <item>Truck Mounted Crane</item>
     </string-array>
 
+    <integer-array name="truck_mounted_cranes_icons">
+        <item>@drawable/drilling</item>
+    </integer-array>
+
     <string-array name="foundation_works">
         <item>Rotary Drilling Crane</item>
         <item>Piling Crane</item>
-        <item>Diaphram Walling</item>
+        <item>Diaphram Walling Crane</item>
     </string-array>
 
     <!--foundation cranes images-->
+    <integer-array name="foundation_works_icons">
+        <item>@drawable/drilling</item>
+        <item>@drawable/drilling</item>
+        <item>@drawable/drilling</item>
+    </integer-array>
 
     <string-array name="tower_cranes">
         <item>Flat Top Crane</item>
@@ -59,6 +69,13 @@
     </string-array>
 
     <!--tower_cranes images-->
+    <integer-array name="tower_cranes_icons">
+        <item>@drawable/tower_crane</item>
+        <item>@drawable/tower_crane</item>
+        <item>@drawable/tower_crane</item>
+        <item>@drawable/tower_crane</item>
+        <item>@drawable/tower_crane</item>
+    </integer-array>
 
 
     <string-array name="telescopic_mobile_cranes">
@@ -68,5 +85,47 @@
     </string-array>
 
     <!--telescopic_mobile_cranes images-->
+    <integer-array name="telescopic_cranes_icons">
+        <item>@drawable/telescopic</item>
+        <item>@drawable/telescopic</item>
+        <item>@drawable/telescopic</item>
+    </integer-array>
+
+
+    <!--Maritime cranes Data-->
+
+    <!--Maritime Main titles-->
+    <string-array name="port_maritime_cranes_main_titles">
+        <item>Ship Cranes</item>
+        <item>Offshore Cranes</item>
+        <item>Miscellaneous </item>
+    </string-array>
+
+
+    <string-array name="miscellaneous_port_maritime_cranes">
+        <item>Mobile Harbour Crane</item>
+        <item>Ship To Shore Crane</item>
+        <item>Container Handler Crane</item>
+        <item>Bulk Unloader Crane</item>
+        <item>Ship Lifter Crane</item>
+        <item>Floating Crane</item>
+        <item>Ship Derrick Crane</item>
+    </string-array>
+
+    <!--miscellaneous cranes related images-->
+
+    <string-array name="ship_port_maritime_cranes">
+        <item>Pedestal Crane</item>
+        <item>Knuckle Boom Crane</item>
+    </string-array>
+
+    <!--ship cranes related images-->
+
+
+    <string-array name="offshore_port_maritime_cranes">
+        <item>Pedestal Crane</item>
+    </string-array>
+
+    <!--offshore cranes related images-->
 
 </resources>

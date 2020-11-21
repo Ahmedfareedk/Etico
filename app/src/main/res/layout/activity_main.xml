@@ -4,17 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    app:layout_scrollFlags="scroll|enterAlways"
     tools:context=".ui.main.MainActivity">
+
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/main_toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:theme="@style/toolbar_theme"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/main_tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorIcons"
+        app:layout_constraintTop_toBottomOf="@id/main_toolbar"
+        app:tabIconTint="@color/tabs_tint"
+        android:visibility="gone"
+        app:tabMode="fixed" />
+
+
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/main_nav_view"

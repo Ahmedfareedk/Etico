@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#039BE5</color>
-    <color name="colorPrimaryDark">#1E88E5</color>
+    <color name="colorPrimary">#740A13</color>
+    <color name="colorPrimaryDark">#451400</color>
     <color name="colorAccent">#015495</color>
 
     <color name="colorIcons">#740A13</color>
@@ -9,5 +9,7 @@
     <color name="colorCardViewBackground">#F5F5F5</color>
     <color name="colorUnchecked">#8C8C8C</color>
     <color name="colorTextTitle">#1B1B1B</color>
+    <color name="colorMainTitleText">#8C8C8C</color>
+
     <color name="cardViewStrokeColor">#1B1B1B</color>
 </resources>

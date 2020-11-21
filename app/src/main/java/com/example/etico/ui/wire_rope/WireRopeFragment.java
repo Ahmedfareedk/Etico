@@ -25,7 +25,7 @@ public class WireRopeFragment extends Fragment {
         LinearLayout track  = view.findViewById(R.id.layout_track_wire_rope_root);
 
         track.setOnClickListener(view1 -> {
-            Navigation.findNavController(view).navigate(R.id.action_wireRopeFragment_to_navigation);
+            Navigation.findNavController(view).navigate(R.id.action_wireRopeFragment_to_viewPagerFragment);
         });
         
 

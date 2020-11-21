@@ -14,6 +14,7 @@
         android:layout_marginTop="@dimen/_8sdp"
         android:fontFamily="@font/ubuntu_bold"
         android:textSize="@dimen/_18sdp"
+        android:textColor="@color/colorMainTitleText"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Crawler Cranes" />
