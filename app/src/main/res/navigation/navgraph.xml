@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navgraph"
-    app:startDestination="@id/wireRopeFragment">
+    app:startDestination="@id/signUpFragment">
 
     <fragment
         android:id="@+id/wireRopeFragment"
@@ -27,6 +27,11 @@
         android:name="com.example.etico.ui.shackle_hook.ShackleHookFragment"
         android:label="fragment_shackle_hook"
         tools:layout="@layout/fragment_shackle_hook" />
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.etico.ui.signup.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" />
     <fragment
         android:id="@+id/viewPagerFragment"
         android:name="com.example.etico.ui.view_pager_fragment.ViewPagerFragment"

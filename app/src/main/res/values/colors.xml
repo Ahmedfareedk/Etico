@@ -10,6 +10,8 @@
     <color name="colorUnchecked">#8C8C8C</color>
     <color name="colorTextTitle">#1B1B1B</color>
     <color name="colorMainTitleText">#8C8C8C</color>
+    <color name="colorHint">#7B7B7B</color>
+    <color name="havingAccountText">#28abb9</color>
 
     <color name="cardViewStrokeColor">#1B1B1B</color>
 </resources>
