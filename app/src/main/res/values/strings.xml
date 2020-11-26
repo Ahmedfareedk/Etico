@@ -4,6 +4,10 @@
     <string name="sling">Sling</string>
     <string name="shackles_hooks"><![CDATA[Shackle&Hook]]></string>
 
+    <string-array name="user_types">
+        <item >Admin</item>
+        <item>Client</item>
+    </string-array>
 
     <string name="track">Tracking</string>
 
@@ -23,6 +27,21 @@
     <string name="port_maritime_cranes"><![CDATA[Port&Maritime\nCranes]]></string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sign_up">SignUp</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="email_address">Email Address</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="user_type">User Type</string>
+    <string name="create_account">Create Account</string>
+    <string name="already_having_an_account">Already Having an Account? Sign in</string>
+    <string name="choose_user_type">Choose User Type</string>
+    <string name="full_name">Full Name</string>
+    <string name="position_title">Position Title</string>
+    <string name="company">Company</string>
+    <string name="sign_in">Sign In</string>
+    <string name="do_not_have_account">Don\'t Have an Account? Create Account</string>
 
 
 </resources>

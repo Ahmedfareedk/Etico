@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:text="@string/choose_user_type"
+    android:id="@+id/user_type_tv"
+    android:padding="@dimen/_8sdp"
+    android:textColor="@color/colorTextTitle"
+    android:background="@color/colorWhite"
+    android:textSize="@dimen/_14sdp"
+    android:fontFamily="@font/ubuntu_regular"
+    >
+
+</TextView>
