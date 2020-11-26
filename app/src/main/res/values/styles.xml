@@ -25,7 +25,7 @@
     <style name="TextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
         <item name="boxStrokeColor">@color/text_input_stroke_unfocused_color</item>
         <item name="boxStrokeWidth">2dp</item>
-        <item name="startIconTint">@color/colorHint</item>
+        <item name="startIconTint">@color/text_input_stroke_unfocused_color</item>
         <item name="boxBackgroundMode">outline</item>
         <item name="boxCornerRadiusTopEnd">@dimen/_12sdp</item>
         <item name="boxCornerRadiusTopStart">@dimen/_12sdp</item>

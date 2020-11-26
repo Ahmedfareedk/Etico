@@ -15,6 +15,7 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 
 import com.example.etico.R;
+import com.example.etico.utils.HandleDropDownTextView;
 
 
 public class SignUpFragment extends Fragment {
@@ -42,27 +43,8 @@ public class SignUpFragment extends Fragment {
 
     private void setUserTypeAutocompleteTextView() {
 
-        ArrayAdapter<String> userTypeAdapter = new ArrayAdapter<>(getActivity(), R.layout.user_type_item,getResources().getStringArray(R.array.user_types));
-        userTypeTextView.setAdapter(userTypeAdapter);
+        HandleDropDownTextView.buildDropDownMenu(getContext(), userTypeTextView,
+                R.layout.user_type_item, getResources().getStringArray(R.array.user_types));
 
-        userTypeTextView.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-                userTypeTextView.setEnabled(false);
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if(userTypeTextView.isPerformingCompletion()){
-                    userTypeTextView.dismissDropDown();
-                    userTypeTextView.setEnabled(false);
-                }
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
     }
 }
