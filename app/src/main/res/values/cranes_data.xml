@@ -128,4 +128,37 @@
 
     <!--offshore cranes related images-->
 
+
+
+
+    <!--End Fittings strings-->
+    <string-array name="end_fittings_titles">
+        <item>Shackle</item>
+        <item>Wire Rope Clip</item>
+        <item>Hook</item>
+        <item>Socket</item>
+        <item>Turnbuckle</item>
+        <item>Connecting Link</item>
+        <item>Lifting Eye</item>
+        <item>Load Binder</item>
+        <item>Chain</item>
+        <item>Shortening Clutch</item>
+        <item>Block</item>
+    </string-array>
+
+    <!--End Fittings Images-->
+    <integer-array name="end_fittings_images">
+        <item>@drawable/shackle_real</item>
+        <item>@drawable/wire_rope_clip</item>
+        <item>@drawable/hook_real</item>
+        <item>@drawable/socket</item>
+        <item>@drawable/turnbuckle</item>
+        <item>@drawable/connecting_link</item>
+        <item>@drawable/lifting_eye</item>
+        <item>@drawable/loadbinder</item>
+        <item>@drawable/chain</item>
+        <item>@drawable/clutch</item>
+        <item>@drawable/block</item>
+    </integer-array>
+
 </resources>

@@ -1,4 +1,4 @@
-package com.example.etico.ui.shackle_hook;
+package com.example.etico.ui.end_fittings;
 
 import android.os.Bundle;
 
@@ -12,10 +12,10 @@ import com.example.etico.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link ShackleHookFragment#newInstance} factory method to
+ * Use the {@link EndFittingsFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ShackleHookFragment extends Fragment {
+public class EndFittingsFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -26,7 +26,7 @@ public class ShackleHookFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public ShackleHookFragment() {
+    public EndFittingsFragment() {
         // Required empty public constructor
     }
 
@@ -39,8 +39,8 @@ public class ShackleHookFragment extends Fragment {
      * @return A new instance of fragment ShackleHookFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static ShackleHookFragment newInstance(String param1, String param2) {
-        ShackleHookFragment fragment = new ShackleHookFragment();
+    public static EndFittingsFragment newInstance(String param1, String param2) {
+        EndFittingsFragment fragment = new EndFittingsFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);

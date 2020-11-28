@@ -6,7 +6,8 @@
 
     <color name="colorIcons">#740A13</color>
     <color name="colorWhite">#fbfbfb</color>
-    <color name="colorCardViewBackground">#F5F5F5</color>
+    <color name="colorRecyclerViewBackground">#F5F5F5</color>
+    <color name="colorCardViewBackground">#FFFFFF</color>
     <color name="colorUnchecked">#8C8C8C</color>
     <color name="colorTextTitle">#1B1B1B</color>
     <color name="colorMainTitleText">#8C8C8C</color>

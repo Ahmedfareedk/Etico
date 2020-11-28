@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navgraph"
-    app:startDestination="@id/signInFragment">
+    app:startDestination="@id/endFittingItemsFragment">
 
     <fragment
         android:id="@+id/wireRopeFragment"
@@ -13,9 +13,10 @@
         <action
             android:id="@+id/action_wireRopeFragment_to_viewPagerFragment"
             app:destination="@id/viewPagerFragment"
-            app:enterAnim="@anim/fragment_fade_enter"
-            app:popUpTo="@id/wireRopeFragment"
-            app:popUpToInclusive="true" />
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
     </fragment>
     <fragment
         android:id="@+id/sLingFragment"
@@ -24,9 +25,17 @@
         tools:layout="@layout/fragment_sling" />
     <fragment
         android:id="@+id/shackleHookFragment"
-        android:name="com.example.etico.ui.shackle_hook.ShackleHookFragment"
+        android:name="com.example.etico.ui.end_fittings.EndFittingsFragment"
         android:label="fragment_shackle_hook"
-        tools:layout="@layout/fragment_shackle_hook" />
+        tools:layout="@layout/fragment_shackle_hook" >
+        <action
+            android:id="@+id/action_shackleHookFragment_to_endFittingItemsFragment"
+            app:destination="@id/endFittingItemsFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+    </fragment>
     <fragment
         android:id="@+id/signUpFragment"
         android:name="com.example.etico.ui.signup.SignUpFragment"
@@ -40,13 +49,22 @@
         <action
             android:id="@+id/action_viewPagerFragment_to_wireRopeFragment"
             app:destination="@id/wireRopeFragment"
-            app:enterAnim="@android:anim/slide_in_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
             app:popUpTo="@id/viewPagerFragment"
-            app:popUpToInclusive="true" />
+            app:popUpToInclusive="true"
+            />
     </fragment>
     <fragment
         android:id="@+id/signInFragment"
         android:name="com.example.etico.ui.signin.SignInFragment"
         android:label="fragment_sign_in"
         tools:layout="@layout/fragment_sign_in" />
+    <fragment
+        android:id="@+id/endFittingItemsFragment"
+        android:name="com.example.etico.ui.end_fittings.EndFittingItemsFragment"
+        android:label="fragment_end_fitting_items"
+        tools:layout="@layout/fragment_end_fitting_items" />
 </navigation>
