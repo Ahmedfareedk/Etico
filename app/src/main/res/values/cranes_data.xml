@@ -161,4 +161,25 @@
         <item>@drawable/block</item>
     </integer-array>
 
+
+
+    <!--Slings Data Sets-->
+
+    <!--Slings main titles-->
+    <string-array name="slings_titles">
+        <item>Single Leg Wire Rope Sling</item>
+        <item>Two Leg Wire Rope Sling</item>
+        <item>Three Leg Wire Rope Sling</item>
+        <item>Four Leg Wire Rope Sling</item>
+        <item>Lifting Webbing Sling</item>
+    </string-array>
+
+    <!--sling Images-->
+    <integer-array name="sling_images">
+        <item>@drawable/single_leg</item>
+        <item>@drawable/double_leg</item>
+        <item>@drawable/triple_leg</item>
+        <item>@drawable/quad_leg</item>
+        <item>@drawable/webbing_sling</item>
+    </integer-array>
 </resources>

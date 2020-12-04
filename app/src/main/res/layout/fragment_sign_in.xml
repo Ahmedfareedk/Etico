@@ -26,10 +26,10 @@
         style="@style/TextInputLayoutStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_48sdp"
-        android:hint="@string/email_address"
         android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_48sdp"
         android:layout_marginEnd="@dimen/_8sdp"
+        android:hint="@string/email_address"
         android:textColorHint="@color/colorHint"
         app:endIconMode="clear_text"
         app:endIconTint="@color/colorHint"
@@ -58,9 +58,9 @@
         app:endIconMode="password_toggle"
         app:endIconTint="@color/colorHint"
         app:hintTextColor="@color/text_input_stroke_unfocused_color"
-        app:layout_constraintTop_toBottomOf="@id/signin_email_layout"
-        app:layout_constraintStart_toStartOf="@id/signin_email_layout"
         app:layout_constraintEnd_toEndOf="@id/signin_email_layout"
+        app:layout_constraintStart_toStartOf="@id/signin_email_layout"
+        app:layout_constraintTop_toBottomOf="@id/signin_email_layout"
         app:startIconDrawable="@drawable/ic_password">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -87,9 +87,9 @@
         app:endIconMode="dropdown_menu"
         app:endIconTint="@color/colorHint"
         app:hintTextColor="@color/text_input_stroke_unfocused_color"
-       app:layout_constraintTop_toBottomOf="@id/signin_password_layout"
-        app:layout_constraintStart_toStartOf="@id/signin_password_layout"
         app:layout_constraintEnd_toEndOf="@id/signin_password_layout"
+        app:layout_constraintStart_toStartOf="@id/signin_password_layout"
+        app:layout_constraintTop_toBottomOf="@id/signin_password_layout"
         app:startIconDrawable="@drawable/ic_user_type"
         app:startIconTint="@color/text_input_stroke_unfocused_color">
 
@@ -136,4 +136,17 @@
         app:layout_constraintEnd_toEndOf="@id/sign_in_button"
         app:layout_constraintStart_toStartOf="@id/sign_in_button"
         app:layout_constraintTop_toBottomOf="@id/sign_in_button" />
+
+
+    <TextView
+        android:id="@+id/skip_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Skip"
+        android:textColor="@android:color/holo_blue_bright"
+        android:textSize="@dimen/_16sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>

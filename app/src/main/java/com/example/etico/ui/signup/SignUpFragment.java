@@ -5,6 +5,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -13,13 +14,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.TextView;
 
 import com.example.etico.R;
 import com.example.etico.utils.HandleDropDownTextView;
 
 
-public class SignUpFragment extends Fragment {
+public class SignUpFragment extends Fragment implements View.OnClickListener {
     private AutoCompleteTextView userTypeTextView;
+    private TextView alreadyhaveAcc;
 
 
     public SignUpFragment() {
@@ -37,6 +40,10 @@ public class SignUpFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         userTypeTextView = view.findViewById(R.id.sign_up_user_type_auto_complete_tv);
+        alreadyhaveAcc = view.findViewById(R.id.already_have_account_tv);
+        alreadyhaveAcc.setOnClickListener(view1 -> {
+            Navigation.findNavController(view).navigate(R.id.action_signUpFragment_to_signInFragment);
+        });
 
         setUserTypeAutocompleteTextView();
     }
@@ -46,5 +53,12 @@ public class SignUpFragment extends Fragment {
         HandleDropDownTextView.buildDropDownMenu(getContext(), userTypeTextView,
                 R.layout.user_type_item, getResources().getStringArray(R.array.user_types));
 
+    }
+
+    @Override
+    public void onClick(View view) {
+        if(view.getId() == R.id.already_have_account_tv){
+
+        }
     }
 }
