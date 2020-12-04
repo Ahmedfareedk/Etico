@@ -26,7 +26,6 @@ public class EndFittingItemsFragment extends Fragment {
     String[] endFittingsTitles;
     private TypedArray endFittingsImages;
 
-
     public EndFittingItemsFragment() {
         // Required empty public constructor
     }
