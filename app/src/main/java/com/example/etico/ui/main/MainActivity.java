@@ -16,6 +16,7 @@ import android.widget.LinearLayout;
 
 import com.example.etico.R;
 import com.example.etico.adapter.PagerAdapter;
+import com.example.etico.utils.BottomNavUI;
 import com.example.etico.utils.HandleBottomNavView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
@@ -39,14 +40,31 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(mainToolbar);
 
         navController = Navigation.findNavController(this, R.id.fragment_host);
-        NavigationUI.setupWithNavController(bottomNavigationView, navController);
+        BottomNavUI.setupWithNavController(bottomNavigationView, navController);
+
 
         navController.addOnDestinationChangedListener((controller, destination, arguments) -> {
             if (destination.getId() == R.id.wireRopeFragment || destination.getId() == R.id.sLingFragment || destination.getId() == R.id.shackleHookFragment) {
                 HandleBottomNavView.showBottomNavigationView(bottomNavigationView);
             } else HandleBottomNavView.hideBottomNavigationView(bottomNavigationView);
 
+            if (destination.getId() == R.id.endFittingItemsFragment){
+                mainToolbar.setTitle("End Fittings");
+            }else{
+                mainToolbar.setTitle("SLing Force");
+            }
         });
     }
 
+
+
+    @Override
+    public void onBackPressed() {
+
+        if (bottomNavigationView.getSelectedItemId() != R.id.wireRopeFragment){
+            bottomNavigationView.setSelectedItemId(R.id.wireRopeFragment);
+        }else{
+          super.onBackPressed();
+        }
+    }
 }

@@ -21,7 +21,7 @@ import com.example.etico.utils.HandleDropDownTextView;
 
 
 public class SignUpFragment extends Fragment implements View.OnClickListener {
-    private AutoCompleteTextView userTypeTextView;
+
     private TextView alreadyhaveAcc;
 
 
@@ -39,21 +39,14 @@ public class SignUpFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        userTypeTextView = view.findViewById(R.id.sign_up_user_type_auto_complete_tv);
         alreadyhaveAcc = view.findViewById(R.id.already_have_account_tv);
         alreadyhaveAcc.setOnClickListener(view1 -> {
             Navigation.findNavController(view).navigate(R.id.action_signUpFragment_to_signInFragment);
         });
 
-        setUserTypeAutocompleteTextView();
     }
 
-    private void setUserTypeAutocompleteTextView() {
 
-        HandleDropDownTextView.buildDropDownMenu(getContext(), userTypeTextView,
-                R.layout.user_type_item, getResources().getStringArray(R.array.user_types));
-
-    }
 
     @Override
     public void onClick(View view) {

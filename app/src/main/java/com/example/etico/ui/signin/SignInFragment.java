@@ -21,7 +21,7 @@ import com.example.etico.utils.HandleDropDownTextView;
 import com.google.android.material.button.MaterialButton;
 
 public class SignInFragment extends Fragment implements View.OnClickListener{
-    private AutoCompleteTextView signInAutoCompleteTV;
+
     private TextView skipTV, createAccTV;
     private View mainView;
     private MaterialButton button;
@@ -42,7 +42,6 @@ public class SignInFragment extends Fragment implements View.OnClickListener{
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        signInAutoCompleteTV = view.findViewById(R.id.sign_in_user_type_auto_complete_tv);
         skipTV = view.findViewById(R.id.skip_tv);
         createAccTV = view.findViewById(R.id.do_not_have_account_tv);
         button = view.findViewById(R.id.sign_in_button);
@@ -51,15 +50,10 @@ public class SignInFragment extends Fragment implements View.OnClickListener{
         this.mainView = view;
 
 
-        setUserTypeAutocompleteTextView();
     }
 
 
-    private void setUserTypeAutocompleteTextView() {
 
-        HandleDropDownTextView.buildDropDownMenu(getContext(), signInAutoCompleteTV,
-                R.layout.user_type_item, getResources().getStringArray(R.array.user_types));
-    }
 
 
     @Override

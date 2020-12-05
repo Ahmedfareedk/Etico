@@ -12,6 +12,7 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.example.etico.R;
+import com.example.etico.utils.HandleNavigationInMainScreenFragments;
 
 public class WireRopeFragment extends Fragment {
 
@@ -23,11 +24,7 @@ public class WireRopeFragment extends Fragment {
         View view =  inflater.inflate(R.layout.fragment_wire_rope, container, false);
 
         LinearLayout track  = view.findViewById(R.id.layout_track_wire_rope_root);
-
-        track.setOnClickListener(view1 -> {
-            Navigation.findNavController(view).navigate(R.id.action_wireRopeFragment_to_viewPagerFragment);
-        });
-        
+        HandleNavigationInMainScreenFragments.navigateTo(track, view, R.id.action_wireRopeFragment_to_viewPagerFragment);
 
         return view;
     }

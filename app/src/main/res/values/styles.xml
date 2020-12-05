@@ -30,11 +30,15 @@
         <item name="boxCornerRadiusTopEnd">@dimen/_12sdp</item>
         <item name="boxCornerRadiusTopStart">@dimen/_12sdp</item>
         <item name="hintTextColor">@color/colorIcons</item>
+    </style>
 
-
-
-
-
+    <style name="DetailsTextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+    <item name="boxStrokeColor">@color/text_input_stroke_unfocused_color</item>
+    <item name="boxStrokeWidth">2dp</item>
+    <item name="boxBackgroundMode">outline</item>
+    <item name="boxCornerRadiusTopEnd">@dimen/_12sdp</item>
+    <item name="boxCornerRadiusTopStart">@dimen/_12sdp</item>
+    <item name="hintTextColor">@color/colorIcons</item>
     </style>
 
 </resources>

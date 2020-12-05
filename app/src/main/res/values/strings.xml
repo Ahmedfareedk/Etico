@@ -9,6 +9,11 @@
         <item>Client</item>
     </string-array>
 
+    <string-array name="wire_rope_locations">
+        <item>Boom</item>
+        <item>Hoist</item>
+    </string-array>
+
     <string name="track">Tracking</string>
 
 
@@ -42,6 +47,16 @@
     <string name="company">Company</string>
     <string name="sign_in">Sign In</string>
     <string name="do_not_have_account">Don\'t Have an Account? Create Account</string>
+    <string name="machine_serial_number">Machine Serial Number</string>
+    <string name="machine_model">Machine Model</string>
+    <string name="wire_rope_location">Wire Rope Location</string>
+    <string name="machine_manufacture">Machine Manufacture</string>
+    <string name="wire_rope_manufacture">Wire Rope Manufacture</string>
+    <string name="wire_rope_construction">Wire Rope Construction</string>
+    <string name="wire_rope_diameter">Wire Rope Diameter</string>
+    <string name="wire_rope_length">Wire Rope Length</string>
+    <string name="machine_specifications">Machine Specifications</string>
+    <string name="current_machine_hour">Current Machine Hour</string>
 
 
 </resources>

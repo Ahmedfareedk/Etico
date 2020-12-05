@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navgraph"
-    app:startDestination="@id/detailedSlingsFragment">
+    app:startDestination="@id/signInFragment">
 
     <fragment
         android:id="@+id/wireRopeFragment"
@@ -22,7 +22,15 @@
         android:id="@+id/sLingFragment"
         android:name="com.example.etico.ui.sling.SLingFragment"
         android:label="fragment_s_ling"
-        tools:layout="@layout/fragment_sling" />
+        tools:layout="@layout/fragment_sling" >
+        <action
+            android:id="@+id/action_sLingFragment_to_detailedSlingsFragment"
+            app:destination="@id/detailedSlingsFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+    </fragment>
     <fragment
         android:id="@+id/shackleHookFragment"
         android:name="com.example.etico.ui.end_fittings.EndFittingsFragment"
@@ -91,8 +99,13 @@
         android:label="fragment_end_fitting_items"
         tools:layout="@layout/fragment_end_fitting_items" />
     <fragment
+        android:id="@+id/wireRopeSpecificationsFragment"
+        android:name="com.example.etico.ui.wire_rope.WireRopeSpecificationsFragment"
+        android:label="wire_rope_specifications"
+        tools:layout="@layout/fragment_wire_rope_specifications" />
+    <fragment
         android:id="@+id/detailedSlingsFragment"
         android:name="com.example.etico.ui.sling.DetailedSlingsFragment"
-        android:label="fragment_detailed_slings"
-        tools:layout="@layout/fragment_detailed_slings" />
+        android:label="wire_rope_specifications"
+        tools:layout="@layout/fragment_wire_rope_specifications" />
 </navigation>
