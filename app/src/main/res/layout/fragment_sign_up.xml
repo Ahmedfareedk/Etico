@@ -178,34 +178,6 @@
                 android:textColor="@color/colorTextTitle" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/signup_user_type_layout"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_6sdp"
-            android:hint="@string/user_type"
-            android:textColorHint="@color/colorHint"
-            app:boxBackgroundMode="outline"
-            app:boxCornerRadiusTopEnd="@dimen/_12sdp"
-            app:boxCornerRadiusTopStart="@dimen/_12sdp"
-            app:boxStrokeColor="@color/text_input_stroke_unfocused_color"
-            app:boxStrokeWidth="@dimen/_2sdp"
-            app:endIconMode="dropdown_menu"
-            app:endIconTint="@color/colorHint"
-            app:hintTextColor="@color/colorIcons"
-            app:startIconDrawable="@drawable/ic_user_type"
-            app:startIconTint="@color/text_input_stroke_unfocused_color"
-            app:layout_constraintEnd_toEndOf="@id/signup_confirm_password_layout"
-            app:layout_constraintStart_toStartOf="@id/signup_confirm_password_layout"
-            app:layout_constraintTop_toBottomOf="@id/signup_confirm_password_layout">
-            <AutoCompleteTextView
-                android:id="@+id/sign_up_user_type_auto_complete_tv"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/colorTextTitle"
-                android:textSize="@dimen/_12sdp" />
-        </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/create_account_button"
@@ -222,9 +194,9 @@
             android:textColor="@color/colorIcons"
             android:textSize="@dimen/_16ssp"
             app:cornerRadius="@dimen/_8sdp"
-            app:layout_constraintEnd_toEndOf="@id/signup_user_type_layout"
-            app:layout_constraintStart_toStartOf="@id/signup_user_type_layout"
-            app:layout_constraintTop_toBottomOf="@id/signup_user_type_layout"
+            app:layout_constraintEnd_toEndOf="@id/signup_confirm_password_layout"
+            app:layout_constraintStart_toStartOf="@id/signup_confirm_password_layout"
+            app:layout_constraintTop_toBottomOf="@id/signup_confirm_password_layout"
             app:rippleColor="@color/colorHint"
             app:strokeColor="@color/colorIcons"
             app:strokeWidth="@dimen/_1sdp" />

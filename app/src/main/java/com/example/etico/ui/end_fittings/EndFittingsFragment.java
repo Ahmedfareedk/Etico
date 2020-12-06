@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import com.example.etico.R;
+import com.example.etico.utils.HandleNavigationInMainScreenFragments;
 
 
 public class EndFittingsFragment extends Fragment {
@@ -35,7 +36,8 @@ public class EndFittingsFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        LinearLayout track  = (LinearLayout) view.findViewById(R.id.shackles_layout_buttons).findViewById(R.id.layout_track_wire_rope_root);
-        track.setOnClickListener(v-> Navigation.findNavController(view).navigate(R.id.action_shackleHookFragment_to_endFittingItemsFragment));
+        LinearLayout track  = view.findViewById(R.id.shackles_layout_buttons).findViewById(R.id.layout_track_wire_rope_root);
+        HandleNavigationInMainScreenFragments.navigateTo(track, view, R.id.action_shackleHookFragment_to_endFittingItemsFragment);
+       // track.setOnClickListener(v-> Navigation.findNavController(view).navigate(R.id.action_shackleHookFragment_to_endFittingItemsFragment));
     }
 }
