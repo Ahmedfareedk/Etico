@@ -72,6 +72,13 @@
             app:popUpTo="@id/viewPagerFragment"
             app:popUpToInclusive="true"
             />
+        <action
+            android:id="@+id/action_viewPagerFragment_to_wireRopeSpecificationsFragment"
+            app:destination="@id/wireRopeSpecificationsFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
     </fragment>
     <fragment
         android:id="@+id/signInFragment"
@@ -108,4 +115,12 @@
         android:name="com.example.etico.ui.sling.DetailedSlingsFragment"
         android:label="wire_rope_specifications"
         tools:layout="@layout/fragment_wire_rope_specifications" />
+
+
+
+    <fragment
+        android:id="@+id/industrialFragment"
+        android:name="com.example.etico.ui.industrial.IndustrialFragment"
+        android:label="Industrial_fragment"
+        tools:layout="@layout/fragment_industrial" />
 </navigation>

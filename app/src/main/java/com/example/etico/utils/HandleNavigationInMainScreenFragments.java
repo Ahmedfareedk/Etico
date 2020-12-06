@@ -12,4 +12,9 @@ public class HandleNavigationInMainScreenFragments {
         });
 
     }
+    public static void navigateTo(View inflatedView, int navigateActionId){
+
+            Navigation.findNavController(inflatedView).navigate(navigateActionId);
+
+    }
 }

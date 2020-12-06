@@ -14,22 +14,26 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.etico.R;
 import com.example.etico.adapter.ConstructionAdapter;
+import com.example.etico.callback.OnRecyclerViewITemCLickListener;
 import com.example.etico.model.ConstructionModel;
 import com.example.etico.model.Crane;
+import com.example.etico.utils.HandleNavigationInMainScreenFragments;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 
-public class ConstructionFragment extends Fragment {
+public class ConstructionFragment extends Fragment implements OnRecyclerViewITemCLickListener {
     private RecyclerView constructionRecyclerView;
     private TypedArray catogoryTitles;
     private List<List<String>> cranesSubTitles;
     private List<TypedArray> cranesIcons;
+    private View view;
     private String[] categoryMainTitles;
     private final int[] craneDataResources = new int[]{R.array.crawler_cranes,
             R.array.foundation_works, R.array.tower_cranes, R.array.telescopic_mobile_cranes, R.array.truck_mounted_cranes};
@@ -41,7 +45,8 @@ public class ConstructionFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_construction, container, false);
+         view =inflater.inflate(R.layout.fragment_construction, container, false);
+         return view;
     }
 
     @Override
@@ -53,7 +58,7 @@ public class ConstructionFragment extends Fragment {
         fillCraneIconsList();
        // setToolbarTitle();
 
-        ConstructionAdapter adapter = new ConstructionAdapter(constructionListItems());
+        ConstructionAdapter adapter = new ConstructionAdapter(constructionListItems(), this);
         constructionRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         constructionRecyclerView.setAdapter(adapter);
         adapter.notifyDataSetChanged();
@@ -88,7 +93,9 @@ public class ConstructionFragment extends Fragment {
 
     }
 
-    private void setToolbarTitle(){
-        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle("Construction Cranes");
+
+    @Override
+    public void onItemClick(int position) {
+        HandleNavigationInMainScreenFragments.navigateTo(view, R.id.action_viewPagerFragment_to_wireRopeSpecificationsFragment);
     }
 }
