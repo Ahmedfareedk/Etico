@@ -12,19 +12,23 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.etico.R;
 import com.example.etico.adapter.ConstructionAdapter;
+import com.example.etico.callback.OnRecyclerViewITemCLickListener;
 import com.example.etico.model.ConstructionModel;
 import com.example.etico.model.Crane;
+import com.example.etico.utils.HandleNavigationInMainScreenFragments;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class PortMaritimeFragment extends Fragment {
+public class PortMaritimeFragment extends Fragment implements OnRecyclerViewITemCLickListener {
     private RecyclerView portMaritimeRecylcerView;
     private ConstructionAdapter adapter;
+    private View view;
     private final int[] portMaritimeCraneNamesResources = new int[]{R.array.ship_port_maritime_cranes,
             R.array.offshore_port_maritime_cranes ,R.array.miscellaneous_port_maritime_cranes};
     private String[] portMaritimeCranesMainTitles;
@@ -36,7 +40,8 @@ public class PortMaritimeFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
-        return inflater.inflate(R.layout.fragment_port_m_aaritime, container, false);
+         view = inflater.inflate(R.layout.fragment_port_m_aaritime, container, false);
+         return view;
     }
 
 
@@ -48,7 +53,7 @@ public class PortMaritimeFragment extends Fragment {
 
         fillStringsListResources();
 
-        adapter = new ConstructionAdapter(portListModelInit());
+        adapter = new ConstructionAdapter(portListModelInit(), this);
         portMaritimeRecylcerView.setLayoutManager(new LinearLayoutManager(getContext()));
         portMaritimeRecylcerView.setAdapter(adapter);
         adapter.notifyDataSetChanged();
@@ -76,4 +81,8 @@ public class PortMaritimeFragment extends Fragment {
     }
 
 
+    @Override
+    public void onItemClick(int position) {
+        HandleNavigationInMainScreenFragments.navigateTo(view, R.id.action_viewPagerFragment_to_wireRopeSpecificationsFragment);
+    }
 }
