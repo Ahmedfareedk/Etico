@@ -114,7 +114,15 @@
         android:id="@+id/detailedSlingsFragment"
         android:name="com.example.etico.ui.sling.DetailedSlingsFragment"
         android:label="wire_rope_specifications"
-        tools:layout="@layout/fragment_wire_rope_specifications" />
+        tools:layout="@layout/fragment_wire_rope_specifications" >
+        <action
+            android:id="@+id/action_detailedSlingsFragment_to_slingsDataSpecifications"
+            app:destination="@id/slingsDataSpecifications"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+    </fragment>
 
 
 
@@ -123,4 +131,9 @@
         android:name="com.example.etico.ui.industrial.IndustrialFragment"
         android:label="Industrial_fragment"
         tools:layout="@layout/fragment_industrial" />
+    <fragment
+        android:id="@+id/slingsDataSpecifications"
+        android:name="com.example.etico.ui.sling.SlingsDataSpecifications"
+        android:label="fragment_slings_data_specifications"
+        tools:layout="@layout/fragment_slings_data_specifications" />
 </navigation>
