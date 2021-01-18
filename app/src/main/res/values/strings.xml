@@ -76,6 +76,10 @@
     <string name="wire_rope_sling_specifications">Wire Rope SLing Specifications</string>
     <string name="submit_data">Submit Data</string>
     <string name="cancel">Cancel</string>
+    <string name="end_fitting_specifications">End Fitting Specifications</string>
+    <string name="material_manufacture">Material Manufacture</string>
+    <string name="working_load_limit">Working Load Limit</string>
+    <string name="diameter_mm">Diameter mm</string>
 
 
 </resources>

@@ -104,7 +104,15 @@
         android:id="@+id/endFittingItemsFragment"
         android:name="com.example.etico.ui.end_fittings.EndFittingItemsFragment"
         android:label="fragment_end_fitting_items"
-        tools:layout="@layout/fragment_end_fitting_items" />
+        tools:layout="@layout/fragment_end_fitting_items" >
+        <action
+            android:id="@+id/action_endFittingItemsFragment_to_endFittingDataSpecifications"
+            app:destination="@id/endFittingDataSpecifications"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+    </fragment>
     <fragment
         android:id="@+id/wireRopeSpecificationsFragment"
         android:name="com.example.etico.ui.wire_rope.WireRopeSpecificationsFragment"
@@ -136,4 +144,9 @@
         android:name="com.example.etico.ui.sling.SlingsDataSpecifications"
         android:label="fragment_slings_data_specifications"
         tools:layout="@layout/fragment_slings_data_specifications" />
+    <fragment
+        android:id="@+id/endFittingDataSpecifications"
+        android:name="com.example.etico.ui.end_fittings.EndFittingDataSpecifications"
+        android:label="fragment_end_fitting_data_specifications"
+        tools:layout="@layout/fragment_end_fitting_data_specifications" />
 </navigation>

@@ -40,7 +40,8 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(mainToolbar);
 
         navController = Navigation.findNavController(this, R.id.fragment_host);
-        BottomNavUI.setupWithNavController(bottomNavigationView, navController);
+       // BottomNavUI.setupWithNavController(bottomNavigationView, navController);
+        NavigationUI.setupWithNavController(bottomNavigationView, navController);
 
 
         navController.addOnDestinationChangedListener((controller, destination, arguments) -> {
