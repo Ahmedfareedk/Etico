@@ -9,10 +9,21 @@
         <item>Client</item>
     </string-array>
 
+
+    <!--Wire Rope Location Options-->
     <string-array name="wire_rope_locations">
         <item>Boom</item>
         <item>Hoist</item>
     </string-array>
+
+
+    <!-- SLing End Fitting options -->
+    <string-array name="sling_end_fitting_options">
+        <item>Standard Soft Eye</item>
+        <item>Standard Thimble Eye</item>
+        <item>Sling Hook/Catch</item>
+    </string-array>
+
 
     <string name="track">Tracking</string>
 
@@ -57,6 +68,18 @@
     <string name="wire_rope_length">Wire Rope Length</string>
     <string name="machine_specifications">Machine Specifications</string>
     <string name="current_machine_hour">Current Machine Hour</string>
+    <string name="wire_rope_diameter_mm">Wire Rope Diameter \'mm\'</string>
+
+    <string name="sling_first_end_fitting">Sling First End Fitting</string>
+    <string name="sling_working_load_limit">Sling Working Load Limit</string>
+    <string name="sling_second_end_fitting">Sling Second End Fitting</string>
+    <string name="wire_rope_sling_specifications">Wire Rope SLing Specifications</string>
+    <string name="submit_data">Submit Data</string>
+    <string name="cancel">Cancel</string>
+    <string name="end_fitting_specifications">End Fitting Specifications</string>
+    <string name="material_manufacture">Material Manufacture</string>
+    <string name="working_load_limit">Working Load Limit</string>
+    <string name="diameter_mm">Diameter mm</string>
 
 
 </resources>

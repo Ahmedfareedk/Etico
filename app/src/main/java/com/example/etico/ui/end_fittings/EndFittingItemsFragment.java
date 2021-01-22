@@ -12,18 +12,22 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.etico.R;
 import com.example.etico.adapter.IndustrialCranesAdapter;
+import com.example.etico.callback.OnRecyclerViewITemCLickListener;
 import com.example.etico.model.Crane;
+import com.example.etico.utils.HandleNavigationInMainScreenFragments;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class EndFittingItemsFragment extends Fragment {
+public class EndFittingItemsFragment extends Fragment implements OnRecyclerViewITemCLickListener {
     private RecyclerView endFittingsRecyclerView;
     private IndustrialCranesAdapter adapter;
     String[] endFittingsTitles;
+    private View view;
     private TypedArray endFittingsImages;
 
     public EndFittingItemsFragment() {
@@ -35,7 +39,7 @@ public class EndFittingItemsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-         View view =inflater.inflate(R.layout.fragment_end_fitting_items, container, false);
+          view =inflater.inflate(R.layout.fragment_end_fitting_items, container, false);
 
          return view;
     }
@@ -47,7 +51,7 @@ public class EndFittingItemsFragment extends Fragment {
         endFittingsTitles = getResources().getStringArray(R.array.end_fittings_titles);
         endFittingsImages = getResources().obtainTypedArray(R.array.end_fittings_images);
 
-        adapter = new IndustrialCranesAdapter(fillEndFittingsList());
+        adapter = new IndustrialCranesAdapter(fillEndFittingsList(), this);
         endFittingsRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         endFittingsRecyclerView.setAdapter(adapter);
     }
@@ -58,5 +62,11 @@ public class EndFittingItemsFragment extends Fragment {
             endFittingItemsList.add(i, new Crane(endFittingsTitles[i], endFittingsImages.getResourceId(i, -1)));
         }
         return endFittingItemsList;
+    }
+
+    @Override
+    public void onItemClick(int position) {
+        HandleNavigationInMainScreenFragments.navigateTo(view, R.id.action_endFittingItemsFragment_to_endFittingDataSpecifications);
+        //Toast.makeText(getContext(), "Under Construction!", Toast.LENGTH_SHORT).show();
     }
 }

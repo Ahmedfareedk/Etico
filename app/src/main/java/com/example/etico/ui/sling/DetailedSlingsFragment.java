@@ -15,28 +15,31 @@ import android.view.ViewGroup;
 
 import com.example.etico.R;
 import com.example.etico.adapter.IndustrialCranesAdapter;
+import com.example.etico.callback.OnRecyclerViewITemCLickListener;
 import com.example.etico.model.Crane;
+import com.example.etico.utils.HandleNavigationInMainScreenFragments;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class DetailedSlingsFragment extends Fragment {
+public class DetailedSlingsFragment extends Fragment implements OnRecyclerViewITemCLickListener {
     private RecyclerView detailedSlingsRecyclerView;
     private IndustrialCranesAdapter detailedSlingsAdapter;
     String[] slingsTitles;
+    private View view;
     private TypedArray slingsImages;
 
     public DetailedSlingsFragment() {
         // Required empty public constructor
     }
 
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_detailed_slings, container, false);
+          view = inflater.inflate(R.layout.fragment_detailed_slings, container, false);
+
+         return view;
     }
 
     @Override
@@ -46,7 +49,7 @@ public class DetailedSlingsFragment extends Fragment {
         slingsImages = getResources().obtainTypedArray(R.array.sling_images);
         detailedSlingsRecyclerView = view.findViewById(R.id.slings_recycler_view);
         detailedSlingsRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        detailedSlingsAdapter = new IndustrialCranesAdapter(fillSlingsList());
+        detailedSlingsAdapter = new IndustrialCranesAdapter(fillSlingsList(), this);
         detailedSlingsRecyclerView.setAdapter(detailedSlingsAdapter);
 
     }
@@ -57,5 +60,10 @@ public class DetailedSlingsFragment extends Fragment {
             slingItemsList.add(i, new Crane(slingsTitles[i], slingsImages.getResourceId(i, -1)));
         }
         return slingItemsList;
+    }
+
+    @Override
+    public void onItemClick(int position) {
+        HandleNavigationInMainScreenFragments.navigateTo(view, R.id.action_detailedSlingsFragment_to_slingsDataSpecifications);
     }
 }

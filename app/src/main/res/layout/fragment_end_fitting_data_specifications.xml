@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".ui.end_fittings.EndFittingDataSpecifications">
+
+    <TextView
+        android:id="@+id/end_fittings_data_details_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:fontFamily="@font/ubuntu_bold"
+        android:text="@string/end_fitting_specifications"
+        android:textColor="@color/colorTextTitle"
+        android:textSize="@dimen/_16sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/end_fittings_data_details_tv">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/end_fittings_manufacture_layout"
+                style="@style/DetailsTextInputLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:hint="@string/material_manufacture"
+                android:textColorHint="@color/colorHint"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/colorHint"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/end_fitting_manufacture_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:textColor="@color/colorTextTitle"
+                    android:textSize="@dimen/_12sdp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/end_fitting_wll_layout"
+                style="@style/DetailsTextInputLayoutStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:hint="@string/working_load_limit"
+                android:textColorHint="@color/colorHint"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/colorHint"
+                app:layout_constraintEnd_toEndOf="@id/end_fittings_manufacture_layout"
+                app:layout_constraintStart_toStartOf="@id/end_fittings_manufacture_layout"
+                app:layout_constraintTop_toBottomOf="@id/end_fittings_manufacture_layout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/end_fitting_wll_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textColor="@color/colorTextTitle"
+                    android:textSize="@dimen/_12sdp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/end_fitting_diameter_layout"
+                style="@style/DetailsTextInputLayoutStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:hint="@string/diameter_mm"
+                android:textColorHint="@color/colorHint"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/colorHint"
+                app:layout_constraintEnd_toEndOf="@id/end_fittings_manufacture_layout"
+                app:layout_constraintStart_toStartOf="@id/end_fittings_manufacture_layout"
+                app:layout_constraintTop_toBottomOf="@id/end_fitting_wll_layout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/end_fitting_diameter_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:textColor="@color/colorTextTitle"
+                    android:textSize="@dimen/_12sdp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/end_fitting_data_submit_btn"
+                style="@style/TextAppearance.MaterialComponents.Button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:backgroundTint="@color/colorWhite"
+                android:fontFamily="@font/ubuntu_bold"
+                android:paddingTop="@dimen/_8sdp"
+                android:paddingBottom="@dimen/_8sdp"
+                android:text="@string/submit_data"
+                android:textAllCaps="false"
+                android:textColor="@color/colorIcons"
+                android:textSize="@dimen/_16ssp"
+                app:cornerRadius="@dimen/_8sdp"
+                app:layout_constraintEnd_toEndOf="@id/end_fittings_manufacture_layout"
+                app:layout_constraintStart_toStartOf="@id/end_fittings_manufacture_layout"
+                app:layout_constraintTop_toBottomOf="@id/end_fitting_diameter_layout"
+                app:rippleColor="@color/colorHint"
+                app:strokeColor="@color/colorIcons"
+                app:strokeWidth="@dimen/_1sdp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/end_fitting_data_cancel_btn"
+                style="@style/TextAppearance.MaterialComponents.Button"
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:backgroundTint="@color/colorWhite"
+                android:fontFamily="@font/ubuntu_bold"
+                android:paddingTop="@dimen/_8sdp"
+                android:paddingBottom="@dimen/_8sdp"
+                android:text="@string/cancel"
+                android:textAllCaps="false"
+                android:textColor="@color/colorIcons"
+                android:textSize= "@dimen/_12ssp"
+                app:cornerRadius="@dimen/_8sdp"
+                app:layout_constraintEnd_toEndOf="@id/end_fitting_data_submit_btn"
+                app:layout_constraintStart_toStartOf="@id/end_fitting_data_submit_btn"
+                app:layout_constraintTop_toBottomOf="@id/end_fitting_data_submit_btn"
+                app:rippleColor="@color/colorHint"
+                app:strokeColor="@color/colorIcons"
+                app:strokeWidth="@dimen/_1sdp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
