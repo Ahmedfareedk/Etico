@@ -12,12 +12,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import com.example.etico.R;
 import com.example.etico.adapter.IndustrialCranesAdapter;
 import com.example.etico.callback.OnRecyclerViewITemCLickListener;
-import com.example.etico.model.Crane;
+import com.example.etico.model.TrackingModel;
 import com.example.etico.utils.HandleNavigationInMainScreenFragments;
 
 import java.util.ArrayList;
@@ -56,10 +55,10 @@ public class EndFittingItemsFragment extends Fragment implements OnRecyclerViewI
         endFittingsRecyclerView.setAdapter(adapter);
     }
 
-    private List<Crane> fillEndFittingsList(){
-         List<Crane> endFittingItemsList= new ArrayList<>();
+    private List<TrackingModel> fillEndFittingsList(){
+         List<TrackingModel> endFittingItemsList= new ArrayList<>();
         for(int i = 0 ; i<endFittingsTitles.length; i++){
-            endFittingItemsList.add(i, new Crane(endFittingsTitles[i], endFittingsImages.getResourceId(i, -1)));
+            endFittingItemsList.add(i, new TrackingModel(endFittingsTitles[i], endFittingsImages.getResourceId(i, -1)));
         }
         return endFittingItemsList;
     }

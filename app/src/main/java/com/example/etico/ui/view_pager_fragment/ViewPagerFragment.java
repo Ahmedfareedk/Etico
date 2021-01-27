@@ -8,6 +8,9 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.AndroidViewModel;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.viewpager2.widget.ViewPager2;
@@ -18,21 +21,28 @@ import android.view.ViewGroup;
 
 import com.example.etico.R;
 import com.example.etico.adapter.PagerAdapter;
+import com.example.etico.callback.OnConstructionDataChanged;
+import com.example.etico.callback.OnIndustrialDataChanged;
+import com.example.etico.model.TrackingModel;
 import com.example.etico.ui.construction.ConstructionFragment;
 import com.example.etico.ui.industrial.IndustrialFragment;
 import com.example.etico.ui.port_maritime.PortMaritimeFragment;
+import com.example.etico.viewmodel.CranesViewModel;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Observable;
 
 public class ViewPagerFragment extends Fragment {
-    private List<Fragment> viewFragments;
+
     private ViewPager2 viewPager;
     private TabLayout mainTabLayout;
+    private OnConstructionDataChanged constructionDataChanged;
+    private OnIndustrialDataChanged industrialDataChanged;
     private NavController navController;
-
+    CranesViewModel viewModel;
     public ViewPagerFragment() {
         // Required empty public constructor
     }
@@ -44,6 +54,8 @@ public class ViewPagerFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_view_pager, container, false);
 //        navController = Navigation.findNavController(view);
 
+
+
         return view;
     }
 
@@ -52,6 +64,7 @@ public class ViewPagerFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         viewPager = view.findViewById(R.id.view_pager);
         mainTabLayout = view.findViewById(R.id.main_tab_layout);
+
         viewPager.setAdapter(new PagerAdapter(getActivity(), getViewFragments()));
         initTabMediator();
         OnBackPressedCallback callback = new OnBackPressedCallback(true) {
@@ -60,6 +73,7 @@ public class ViewPagerFragment extends Fragment {
                 if(viewPager.getCurrentItem()!=0){
                     viewPager.setCurrentItem(0);
                 }else{
+                   // requireActivity().onBackPressed();
                     Navigation.findNavController(view).navigate(R.id.action_viewPagerFragment_to_wireRopeFragment);
                 }
             }
@@ -70,7 +84,7 @@ public class ViewPagerFragment extends Fragment {
 
 
     private List<Fragment> getViewFragments() {
-        viewFragments = new ArrayList<>();
+        List<Fragment> viewFragments = new ArrayList<>();
         viewFragments.add(new IndustrialFragment());
         viewFragments.add(new ConstructionFragment());
         viewFragments.add(new PortMaritimeFragment());
@@ -86,6 +100,7 @@ public class ViewPagerFragment extends Fragment {
                     break;
                 case 1:
                     tab.setText("Construction\nCranes");
+
                     break;
                 case 2:
                     tab.setText("Port&Maritime\nCranes");

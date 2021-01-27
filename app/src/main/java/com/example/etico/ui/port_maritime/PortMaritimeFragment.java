@@ -4,7 +4,6 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -12,13 +11,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import com.example.etico.R;
 import com.example.etico.adapter.ConstructionAdapter;
 import com.example.etico.callback.OnRecyclerViewITemCLickListener;
 import com.example.etico.model.ConstructionModel;
-import com.example.etico.model.Crane;
+import com.example.etico.model.TrackingModel;
 import com.example.etico.utils.HandleNavigationInMainScreenFragments;
 
 import java.util.ArrayList;
@@ -69,13 +67,13 @@ public class PortMaritimeFragment extends Fragment implements OnRecyclerViewITem
 
     private List<ConstructionModel> portListModelInit(){
         List<ConstructionModel> listModel = new ArrayList<>();
-        List<Crane> craneItem;
+        List<TrackingModel> trackingModelItem;
         for(int i = 0; i < portMaritimeCranesMainTitles.length; i++){
-            craneItem = new ArrayList<>();
+            trackingModelItem = new ArrayList<>();
             for(int j =0; j < portMariTimeStringsListToBind.get(i).size(); j++){
-                craneItem.add(j, new Crane(portMariTimeStringsListToBind.get(i).get(j), R.drawable.pedestal));
+                trackingModelItem.add(j, new TrackingModel(portMariTimeStringsListToBind.get(i).get(j), R.drawable.pedestal));
             }
-            listModel.add(i, new ConstructionModel(portMaritimeCranesMainTitles[i], craneItem));
+            listModel.add(i, new ConstructionModel(portMaritimeCranesMainTitles[i], trackingModelItem));
         }
         return listModel;
     }

@@ -16,7 +16,7 @@ import android.view.ViewGroup;
 import com.example.etico.R;
 import com.example.etico.adapter.IndustrialCranesAdapter;
 import com.example.etico.callback.OnRecyclerViewITemCLickListener;
-import com.example.etico.model.Crane;
+import com.example.etico.model.TrackingModel;
 import com.example.etico.utils.HandleNavigationInMainScreenFragments;
 
 import java.util.ArrayList;
@@ -54,10 +54,10 @@ public class DetailedSlingsFragment extends Fragment implements OnRecyclerViewIT
 
     }
 
-    private List<Crane> fillSlingsList(){
-        List<Crane> slingItemsList= new ArrayList<>();
+    private List<TrackingModel> fillSlingsList(){
+        List<TrackingModel> slingItemsList= new ArrayList<>();
         for(int i = 0 ; i<slingsTitles.length; i++){
-            slingItemsList.add(i, new Crane(slingsTitles[i], slingsImages.getResourceId(i, -1)));
+            slingItemsList.add(i, new TrackingModel(slingsTitles[i], slingsImages.getResourceId(i, -1)));
         }
         return slingItemsList;
     }
