@@ -1,4 +1,4 @@
-package com.example.etico.ui.end_fittings;
+package com.example.etico.view.end_fittings;
 
 import android.content.res.TypedArray;
 import android.os.Bundle;

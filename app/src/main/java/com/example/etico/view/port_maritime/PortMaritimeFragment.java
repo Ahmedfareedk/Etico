@@ -1,6 +1,5 @@
-package com.example.etico.ui.construction;
+package com.example.etico.view.port_maritime;
 
-import android.content.res.TypedArray;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -14,43 +13,41 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.etico.R;
 import com.example.etico.adapter.ConstructionAdapter;
 import com.example.etico.callback.OnRecyclerViewITemCLickListener;
 import com.example.etico.model.ConstructionModel;
 import com.example.etico.utils.HandleNavigationInMainScreenFragments;
-import com.example.etico.viewmodel.ConstructionViewModel;
-import com.example.etico.viewmodel.CranesViewModel;
+import com.example.etico.viewmodel.PortMaritimeViewModel;
 
-
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
-
-public class ConstructionFragment extends Fragment implements OnRecyclerViewITemCLickListener, Observer<List<ConstructionModel>> {
-    private RecyclerView constructionRecyclerView;
+public class PortMaritimeFragment extends Fragment implements OnRecyclerViewITemCLickListener, Observer<List<ConstructionModel>> {
+    private RecyclerView portMaritimeRecyclerView;
     private View view;
-    private ConstructionViewModel viewModel;
+    private PortMaritimeViewModel viewModel;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        view = inflater.inflate(R.layout.fragment_construction, container, false);
-        return view;
+
+         view = inflater.inflate(R.layout.fragment_port_m_aaritime, container, false);
+         return view;
     }
+
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        constructionRecyclerView = view.findViewById(R.id.main_construction_recycler_view);
-        constructionRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        portMaritimeRecyclerView = view.findViewById(R.id.main_port_maritime_recycler_view);
+        portMaritimeRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
-        viewModel = new ViewModelProvider(requireActivity()).get(ConstructionViewModel.class);
 
-        viewModel.getAllConstructionTrackingItems().observe(requireActivity(), this);
+        viewModel = new ViewModelProvider(requireActivity()).get(PortMaritimeViewModel.class);
+        viewModel.getAllPortMaritimeData().observe(requireActivity(), this);
     }
 
 
@@ -61,9 +58,10 @@ public class ConstructionFragment extends Fragment implements OnRecyclerViewITem
 
     @Override
     public void onChanged(List<ConstructionModel> constructionModels) {
-        ConstructionAdapter adapter = new ConstructionAdapter(constructionModels, ConstructionFragment.this);
-        constructionRecyclerView.setAdapter(adapter);
+        Toast.makeText(getContext(), "Port LivaData", Toast.LENGTH_SHORT).show();
+        ConstructionAdapter adapter = new ConstructionAdapter(constructionModels, this);
+        portMaritimeRecyclerView.setAdapter(adapter);
         adapter.notifyDataSetChanged();
-    }
 
+    }
 }

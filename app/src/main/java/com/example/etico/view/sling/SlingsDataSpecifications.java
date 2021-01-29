@@ -1,4 +1,4 @@
-package com.example.etico.ui.sling;
+package com.example.etico.view.sling;
 
 import android.os.Bundle;
 

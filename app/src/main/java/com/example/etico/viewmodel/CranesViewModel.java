@@ -5,9 +5,7 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 
-import com.example.etico.model.ConstructionModel;
 import com.example.etico.model.TrackingModel;
-import com.example.etico.repos.ConstructionPortMaritimeRepository;
 import com.example.etico.repos.IndustrialCranesRepository;
 import java.util.List;
 

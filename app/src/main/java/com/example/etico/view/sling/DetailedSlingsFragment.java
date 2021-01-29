@@ -1,4 +1,4 @@
-package com.example.etico.ui.sling;
+package com.example.etico.view.sling;
 
 import android.content.res.TypedArray;
 import android.os.Bundle;
@@ -55,7 +55,7 @@ public class DetailedSlingsFragment extends Fragment implements OnRecyclerViewIT
     }
 
     private List<TrackingModel> fillSlingsList(){
-        List<TrackingModel> slingItemsList= new ArrayList<>();
+
         for(int i = 0 ; i<slingsTitles.length; i++){
             slingItemsList.add(i, new TrackingModel(slingsTitles[i], slingsImages.getResourceId(i, -1)));
         }

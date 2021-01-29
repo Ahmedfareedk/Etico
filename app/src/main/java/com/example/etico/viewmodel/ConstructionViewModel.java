@@ -5,18 +5,17 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 import com.example.etico.model.ConstructionModel;
-import com.example.etico.repos.ConstructionPortMaritimeRepository;
+import com.example.etico.repos.ConstructionRepository;
 import java.util.List;
 
 public class ConstructionViewModel extends AndroidViewModel {
 
-    private ConstructionPortMaritimeRepository repository;
-   // private LiveData<List<ConstructionModel>> allConstructionTrackingItems;
+    private ConstructionRepository repository;
 
 
     public ConstructionViewModel(@NonNull Application application) {
         super(application);
-        repository = new ConstructionPortMaritimeRepository(application);
+        repository = new ConstructionRepository(application);
 
 
     }

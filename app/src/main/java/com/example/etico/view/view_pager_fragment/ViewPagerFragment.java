@@ -1,17 +1,11 @@
-package com.example.etico.ui.view_pager_fragment;
+package com.example.etico.view.view_pager_fragment;
 
 import android.os.Bundle;
 
 import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.AndroidViewModel;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProvider;
-import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.viewpager2.widget.ViewPager2;
 
@@ -21,28 +15,20 @@ import android.view.ViewGroup;
 
 import com.example.etico.R;
 import com.example.etico.adapter.PagerAdapter;
-import com.example.etico.callback.OnConstructionDataChanged;
-import com.example.etico.callback.OnIndustrialDataChanged;
-import com.example.etico.model.TrackingModel;
-import com.example.etico.ui.construction.ConstructionFragment;
-import com.example.etico.ui.industrial.IndustrialFragment;
-import com.example.etico.ui.port_maritime.PortMaritimeFragment;
-import com.example.etico.viewmodel.CranesViewModel;
+import com.example.etico.view.construction.ConstructionFragment;
+import com.example.etico.view.industrial.IndustrialFragment;
+import com.example.etico.view.port_maritime.PortMaritimeFragment;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Observable;
 
 public class ViewPagerFragment extends Fragment {
 
     private ViewPager2 viewPager;
     private TabLayout mainTabLayout;
-    private OnConstructionDataChanged constructionDataChanged;
-    private OnIndustrialDataChanged industrialDataChanged;
-    private NavController navController;
-    CranesViewModel viewModel;
+
     public ViewPagerFragment() {
         // Required empty public constructor
     }
@@ -52,10 +38,6 @@ public class ViewPagerFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_view_pager, container, false);
-//        navController = Navigation.findNavController(view);
-
-
-
         return view;
     }
 

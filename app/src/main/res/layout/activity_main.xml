@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/colorWhite"
     app:layout_scrollFlags="scroll|enterAlways"
-    tools:context=".ui.main.MainActivity">
+    tools:context=".view.main.MainActivity">
 
 
     <androidx.appcompat.widget.Toolbar

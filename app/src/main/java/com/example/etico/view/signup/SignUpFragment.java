@@ -1,4 +1,4 @@
-package com.example.etico.ui.signup;
+package com.example.etico.view.signup;
 
 import android.os.Bundle;
 
@@ -7,17 +7,12 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.AutoCompleteTextView;
 import android.widget.TextView;
 
 import com.example.etico.R;
-import com.example.etico.utils.HandleDropDownTextView;
 
 
 public class SignUpFragment extends Fragment implements View.OnClickListener {

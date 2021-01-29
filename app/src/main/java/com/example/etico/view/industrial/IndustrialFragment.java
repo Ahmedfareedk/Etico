@@ -1,4 +1,4 @@
-package com.example.etico.ui.industrial;
+package com.example.etico.view.industrial;
 
 import android.os.Bundle;
 
@@ -27,9 +27,6 @@ import java.util.List;
 public class IndustrialFragment extends Fragment implements OnRecyclerViewITemCLickListener, Observer<List<TrackingModel>> {
     private RecyclerView cranesRecyclerView;
     private IndustrialCranesAdapter cranesAdapter;
-    /* private List<TrackingModel> trackingModelList;
-     private String[] craneNamesArray;
-     private TypedArray craneImagesArray;*/
     private View view;
     private CranesViewModel viewModel;
 
@@ -73,6 +70,6 @@ public class IndustrialFragment extends Fragment implements OnRecyclerViewITemCL
     @Override
     public void onStop() {
         super.onStop();
-        getActivity().getViewModelStore().clear();
+       // getActivity().getViewModelStore().clear();
     }
 }

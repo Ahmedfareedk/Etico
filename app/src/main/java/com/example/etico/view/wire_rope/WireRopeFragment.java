@@ -1,15 +1,13 @@
-package com.example.etico.ui.wire_rope;
+package com.example.etico.view.wire_rope;
 
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
-import android.widget.Toast;
 
 import com.example.etico.R;
 import com.example.etico.utils.HandleNavigationInMainScreenFragments;

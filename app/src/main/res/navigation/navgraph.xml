@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/wireRopeFragment"
-        android:name="com.example.etico.ui.wire_rope.WireRopeFragment"
+        android:name="com.example.etico.view.wire_rope.WireRopeFragment"
         android:label="fragment_wire_rope"
         tools:layout="@layout/fragment_wire_rope" >
         <action
@@ -20,7 +20,7 @@
     </fragment>
     <fragment
         android:id="@+id/sLingFragment"
-        android:name="com.example.etico.ui.sling.SLingFragment"
+        android:name="com.example.etico.view.sling.SLingFragment"
         android:label="fragment_s_ling"
         tools:layout="@layout/fragment_sling" >
         <action
@@ -33,7 +33,7 @@
     </fragment>
     <fragment
         android:id="@+id/shackleHookFragment"
-        android:name="com.example.etico.ui.end_fittings.EndFittingsFragment"
+        android:name="com.example.etico.view.end_fittings.EndFittingsFragment"
         android:label="fragment_shackle_hook"
         tools:layout="@layout/fragment_shackle_hook" >
         <action
@@ -46,7 +46,7 @@
     </fragment>
     <fragment
         android:id="@+id/signUpFragment"
-        android:name="com.example.etico.ui.signup.SignUpFragment"
+        android:name="com.example.etico.view.signup.SignUpFragment"
         android:label="fragment_sign_up"
         tools:layout="@layout/fragment_sign_up" >
         <action
@@ -59,7 +59,7 @@
     </fragment>
     <fragment
         android:id="@+id/viewPagerFragment"
-        android:name="com.example.etico.ui.view_pager_fragment.ViewPagerFragment"
+        android:name="com.example.etico.view.view_pager_fragment.ViewPagerFragment"
         android:label="fragment_view_pager"
         tools:layout="@layout/fragment_view_pager" >
         <action
@@ -82,7 +82,7 @@
     </fragment>
     <fragment
         android:id="@+id/signInFragment"
-        android:name="com.example.etico.ui.signin.SignInFragment"
+        android:name="com.example.etico.view.signin.SignInFragment"
         android:label="fragment_sign_in"
         tools:layout="@layout/fragment_sign_in" >
         <action
@@ -102,7 +102,7 @@
     </fragment>
     <fragment
         android:id="@+id/endFittingItemsFragment"
-        android:name="com.example.etico.ui.end_fittings.EndFittingItemsFragment"
+        android:name="com.example.etico.view.end_fittings.EndFittingItemsFragment"
         android:label="fragment_end_fitting_items"
         tools:layout="@layout/fragment_end_fitting_items" >
         <action
@@ -115,12 +115,12 @@
     </fragment>
     <fragment
         android:id="@+id/wireRopeSpecificationsFragment"
-        android:name="com.example.etico.ui.wire_rope.WireRopeSpecificationsFragment"
+        android:name="com.example.etico.view.wire_rope.WireRopeSpecificationsFragment"
         android:label="wire_rope_specifications"
         tools:layout="@layout/fragment_wire_rope_specifications" />
     <fragment
         android:id="@+id/detailedSlingsFragment"
-        android:name="com.example.etico.ui.sling.DetailedSlingsFragment"
+        android:name="com.example.etico.view.sling.DetailedSlingsFragment"
         android:label="wire_rope_specifications"
         tools:layout="@layout/fragment_wire_rope_specifications" >
         <action
@@ -136,17 +136,17 @@
 
     <fragment
         android:id="@+id/industrialFragment"
-        android:name="com.example.etico.ui.industrial.IndustrialFragment"
+        android:name="com.example.etico.view.industrial.IndustrialFragment"
         android:label="Industrial_fragment"
         tools:layout="@layout/fragment_industrial" />
     <fragment
         android:id="@+id/slingsDataSpecifications"
-        android:name="com.example.etico.ui.sling.SlingsDataSpecifications"
+        android:name="com.example.etico.view.sling.SlingsDataSpecifications"
         android:label="fragment_slings_data_specifications"
         tools:layout="@layout/fragment_slings_data_specifications" />
     <fragment
         android:id="@+id/endFittingDataSpecifications"
-        android:name="com.example.etico.ui.end_fittings.EndFittingDataSpecifications"
+        android:name="com.example.etico.view.end_fittings.EndFittingDataSpecifications"
         android:label="fragment_end_fitting_data_specifications"
         tools:layout="@layout/fragment_end_fitting_data_specifications" />
 </navigation>

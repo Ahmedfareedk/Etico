@@ -1,27 +1,16 @@
-package com.example.etico.ui.main;
+package com.example.etico.view.main;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.LinearLayoutCompat;
 import androidx.appcompat.widget.Toolbar;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.NavigationUI;
-import androidx.viewpager2.widget.ViewPager2;
 
-import android.app.ActionBar;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.LinearLayout;
 
 import com.example.etico.R;
-import com.example.etico.adapter.PagerAdapter;
-import com.example.etico.utils.BottomNavUI;
 import com.example.etico.utils.HandleBottomNavView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.bottomsheet.BottomSheetBehavior;
-import com.google.android.material.tabs.TabLayout;
-import com.google.android.material.tabs.TabLayoutMediator;
 
 
 public class MainActivity extends AppCompatActivity {
