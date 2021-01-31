@@ -6,6 +6,8 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -18,16 +20,17 @@ import com.example.etico.adapter.IndustrialCranesAdapter;
 import com.example.etico.callback.OnRecyclerViewITemCLickListener;
 import com.example.etico.model.TrackingModel;
 import com.example.etico.utils.HandleNavigationInMainScreenFragments;
+import com.example.etico.viewmodel.EndFittingsViewModel;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class EndFittingItemsFragment extends Fragment implements OnRecyclerViewITemCLickListener {
+public class EndFittingItemsFragment extends Fragment implements OnRecyclerViewITemCLickListener, Observer<List<TrackingModel>> {
     private RecyclerView endFittingsRecyclerView;
     private IndustrialCranesAdapter adapter;
-    String[] endFittingsTitles;
     private View view;
-    private TypedArray endFittingsImages;
+    private EndFittingsViewModel viewModel;
+
 
     public EndFittingItemsFragment() {
         // Required empty public constructor
@@ -47,25 +50,25 @@ public class EndFittingItemsFragment extends Fragment implements OnRecyclerViewI
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         endFittingsRecyclerView = view.findViewById(R.id.end_fittings_recycler_view);
-        endFittingsTitles = getResources().getStringArray(R.array.end_fittings_titles);
-        endFittingsImages = getResources().obtainTypedArray(R.array.end_fittings_images);
-
-        adapter = new IndustrialCranesAdapter(fillEndFittingsList(), this);
         endFittingsRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        endFittingsRecyclerView.setAdapter(adapter);
+
+
+        viewModel = new ViewModelProvider(requireActivity()).get(EndFittingsViewModel.class);
+        viewModel.getAllEndFittingsData().observe(requireActivity(), this);
+
+
     }
 
-    private List<TrackingModel> fillEndFittingsList(){
-         List<TrackingModel> endFittingItemsList= new ArrayList<>();
-        for(int i = 0 ; i<endFittingsTitles.length; i++){
-            endFittingItemsList.add(i, new TrackingModel(endFittingsTitles[i], endFittingsImages.getResourceId(i, -1)));
-        }
-        return endFittingItemsList;
-    }
 
     @Override
     public void onItemClick(int position) {
         HandleNavigationInMainScreenFragments.navigateTo(view, R.id.action_endFittingItemsFragment_to_endFittingDataSpecifications);
-        //Toast.makeText(getContext(), "Under Construction!", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onChanged(List<TrackingModel> trackingModels) {
+        adapter = new IndustrialCranesAdapter(trackingModels, this);
+        endFittingsRecyclerView.setAdapter(adapter);
+
     }
 }

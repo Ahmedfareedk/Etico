@@ -58,7 +58,6 @@ public class PortMaritimeFragment extends Fragment implements OnRecyclerViewITem
 
     @Override
     public void onChanged(List<ConstructionModel> constructionModels) {
-        Toast.makeText(getContext(), "Port LivaData", Toast.LENGTH_SHORT).show();
         ConstructionAdapter adapter = new ConstructionAdapter(constructionModels, this);
         portMaritimeRecyclerView.setAdapter(adapter);
         adapter.notifyDataSetChanged();

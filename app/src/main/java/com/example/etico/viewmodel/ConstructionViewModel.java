@@ -5,24 +5,27 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 import com.example.etico.model.ConstructionModel;
-import com.example.etico.repos.ConstructionRepository;
+import com.example.etico.repos.NestedDataRepository;
+import com.example.etico.utils.Constants;
+
 import java.util.List;
 
 public class ConstructionViewModel extends AndroidViewModel {
 
-    private ConstructionRepository repository;
+    private NestedDataRepository repository;
 
 
     public ConstructionViewModel(@NonNull Application application) {
         super(application);
-        repository = new ConstructionRepository(application);
+        repository = new NestedDataRepository(application,Constants.ConstructionDataResources.cranesMainTitlesResource,
+                Constants.ConstructionDataResources.craneTitlesResources, Constants.ConstructionDataResources.cranesIconsResources);
 
 
     }
 
     public LiveData<List<ConstructionModel>> getAllConstructionTrackingItems()
     {
-        return repository.getAllConstructionData();
+        return repository.getAllModelData();
     }
 
 }

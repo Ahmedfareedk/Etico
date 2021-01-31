@@ -7,21 +7,23 @@ import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 
 import com.example.etico.model.ConstructionModel;
-import com.example.etico.repos.PortMaritimeRepository;
+import com.example.etico.repos.NestedDataRepository;
+import com.example.etico.utils.Constants;
 
 import java.util.List;
 
 public class PortMaritimeViewModel extends AndroidViewModel {
 
-    private PortMaritimeRepository repository;
+    private NestedDataRepository repository;
 
     public PortMaritimeViewModel(@NonNull Application application) {
         super(application);
-        repository = new PortMaritimeRepository(application);
+        repository = new NestedDataRepository(application, Constants.PortMaritimeResources.portMainTitlesResource,
+                Constants.PortMaritimeResources.portMaritimeSubNamesResources, Constants.PortMaritimeResources.portMaritimeImages);
     }
 
     public LiveData<List<ConstructionModel>> getAllPortMaritimeData()
     {
-        return repository.getAllPortMaritimeData();
+        return repository.getAllModelData();
     }
 }

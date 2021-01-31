@@ -13,14 +13,13 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import com.example.etico.R;
 import com.example.etico.adapter.IndustrialCranesAdapter;
 import com.example.etico.callback.OnRecyclerViewITemCLickListener;
 import com.example.etico.model.TrackingModel;
 import com.example.etico.utils.HandleNavigationInMainScreenFragments;
-import com.example.etico.viewmodel.CranesViewModel;
+import com.example.etico.viewmodel.IndustrialViewModel;
 
 import java.util.List;
 
@@ -28,7 +27,7 @@ public class IndustrialFragment extends Fragment implements OnRecyclerViewITemCL
     private RecyclerView cranesRecyclerView;
     private IndustrialCranesAdapter cranesAdapter;
     private View view;
-    private CranesViewModel viewModel;
+    private IndustrialViewModel viewModel;
 
     public IndustrialFragment() {
         // Required empty public constructor
@@ -50,7 +49,7 @@ public class IndustrialFragment extends Fragment implements OnRecyclerViewITemCL
         cranesRecyclerView = view.findViewById(R.id.industrial_cranes_recycler);
         cranesRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
-        viewModel = new ViewModelProvider(requireActivity()).get(CranesViewModel.class);
+        viewModel = new ViewModelProvider(requireActivity()).get(IndustrialViewModel.class);
         viewModel.getAllIndustrialTrackingItems().observe(requireActivity(), this);
     }
 

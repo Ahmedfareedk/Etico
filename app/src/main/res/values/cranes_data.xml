@@ -104,7 +104,6 @@
 
         <integer-array name="truck_mounted_cranes_icons">
             <item>@drawable/drilling</item>
-
         </integer-array>
 
 
@@ -137,14 +136,35 @@
         <item>Knuckle Boom Crane</item>
     </string-array>
 
-    <!--ship cranes related images-->
-
-
     <string-array name="offshore_port_maritime_cranes">
         <item>Pedestal Crane</item>
     </string-array>
 
+    <!--ship cranes related images-->
+    <integer-array name="misc_port_maritime_icons">
+        <item>@drawable/pedestal</item>
+        <item>@drawable/pedestal</item>
+        <item>@drawable/pedestal</item>
+        <item>@drawable/pedestal</item>
+        <item>@drawable/pedestal</item>
+        <item>@drawable/pedestal</item>
+        <item>@drawable/pedestal</item>
+    </integer-array>
+
     <!--offshore cranes related images-->
+    <integer-array name="ship_port_maritime_icons">
+        <item>@drawable/pedestal</item>
+        <item>@drawable/pedestal</item>
+    </integer-array>
+
+    <integer-array name="offshore_port_maritime_icons">
+        <item>@drawable/pedestal</item>
+
+    </integer-array>
+
+
+
+
 
 
     <!--End Fittings strings-->
