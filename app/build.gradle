@@ -55,5 +55,22 @@ dependencies {
     //ViewPager2
     implementation 'androidx.viewpager2:viewpager2:1.0.0'
 
+    def components_lifecycle_version = "2.2.0"
+    def room_version = "2.2.6"
+
+    // ViewModel
+    implementation "androidx.lifecycle:lifecycle-viewmodel:$components_lifecycle_version"
+    // LiveData
+    implementation "androidx.lifecycle:lifecycle-livedata:$components_lifecycle_version"
+
+    implementation "androidx.lifecycle:lifecycle-runtime:$components_lifecycle_version"
+
+
+    // Annotation processor
+    annotationProcessor "androidx.lifecycle:lifecycle-compiler:$components_lifecycle_version"
+
+
+
+
 
 }

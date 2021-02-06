@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+
     <string-array name="industrial_cranes_names">
         <item>Overhead Hoist</item>
         <item>Steel Works Ladle/Charging Cranes</item>
         <item>Steel Works Blast</item>
         <item>Cold Rolling/Looper Car</item>
+
     </string-array>
 
     <integer-array name="industrial_images">
@@ -16,10 +19,9 @@
     </integer-array>
 
 
+    <!-- construction cranes data-->
 
-   <!-- construction cranes data-->
-
-    <string-array name="construction_cranes_categories">
+    <string-array name="construction_cranes_main_categories">
         <item>Crawler Cranes</item>
         <item>Foundation Works</item>
         <item>Tower Cranes</item>
@@ -27,69 +29,84 @@
         <item>Truck Mounted Cranes</item>
     </string-array>
 
-
-    <string-array name="crawler_cranes">
-        <item>Lattice Boom Crane</item>
-    </string-array>
-
-    <integer-array name="crawler_cranes_icons">
-        <item>@drawable/lattice_boom</item>
-    </integer-array>
+<!---->
 
 
-    <!--crawler_cranes images-->
-
-    <string-array name="truck_mounted_cranes">
-        <item>Truck Mounted Crane</item>
-    </string-array>
-
-    <integer-array name="truck_mounted_cranes_icons">
-        <item>@drawable/drilling</item>
-    </integer-array>
-
-    <string-array name="foundation_works">
-        <item>Rotary Drilling Crane</item>
-        <item>Piling Crane</item>
-        <item>Diaphram Walling Crane</item>
-    </string-array>
-
-    <!--foundation cranes images-->
-    <integer-array name="foundation_works_icons">
-        <item>@drawable/drilling</item>
-        <item>@drawable/drilling</item>
-        <item>@drawable/drilling</item>
-    </integer-array>
-
-    <string-array name="tower_cranes">
-        <item>Flat Top Crane</item>
-        <item>High Top Crane</item>
-        <item>Luffing Crane</item>
-        <item>Derrick Crane</item>
-        <item>Heavy Load Crane</item>
-    </string-array>
-
-    <!--tower_cranes images-->
-    <integer-array name="tower_cranes_icons">
-        <item>@drawable/tower_crane</item>
-        <item>@drawable/tower_crane</item>
-        <item>@drawable/tower_crane</item>
-        <item>@drawable/tower_crane</item>
-        <item>@drawable/tower_crane</item>
-    </integer-array>
+        <string-array name="crawler_cranes">
+            <item>Lattice Boom Crane</item>
+        </string-array>
 
 
-    <string-array name="telescopic_mobile_cranes">
-        <item>All Terrain Crane</item>
-        <item>Telescopic Crane</item>
-        <item>Rough Terrain Crane</item>
-    </string-array>
 
-    <!--telescopic_mobile_cranes images-->
-    <integer-array name="telescopic_cranes_icons">
-        <item>@drawable/telescopic</item>
-        <item>@drawable/telescopic</item>
-        <item>@drawable/telescopic</item>
-    </integer-array>
+        <string-array name="foundation_works">
+            <item>Rotary Drilling Crane</item>
+            <item>Piling Crane</item>
+            <item>Diaphram Walling Crane</item>
+        </string-array>
+
+
+        <string-array name="tower_cranes">
+            <item>Flat Top Crane</item>
+            <item>High Top Crane</item>
+            <item>Luffing Crane</item>
+            <item>Derrick Crane</item>
+            <item>Heavy Load Crane</item>
+        </string-array>
+
+
+
+        <string-array name="telescopic_mobile_cranes">
+            <item>All Terrain Crane</item>
+            <item>Telescopic Crane</item>
+            <item>Rough Terrain Crane</item>
+        </string-array>
+
+
+
+        <string-array name="truck_mounted_cranes">
+            <item>Truck Mounted Crane</item>
+        </string-array>
+
+
+
+
+
+
+
+
+        <!--crawler_cranes images-->
+        <integer-array name="crawler_cranes_icons">
+            <item>@drawable/lattice_boom</item>
+        </integer-array>
+
+        <!--foundation cranes images-->
+        <integer-array name="foundation_works_icons">
+            <item>@drawable/drilling</item>
+            <item>@drawable/drilling</item>
+            <item>@drawable/drilling</item>
+        </integer-array>
+
+        <!--tower_cranes images-->
+        <integer-array name="tower_cranes_icons">
+            <item>@drawable/tower_crane</item>
+            <item>@drawable/tower_crane</item>
+            <item>@drawable/tower_crane</item>
+            <item>@drawable/tower_crane</item>
+            <item>@drawable/tower_crane</item>
+        </integer-array>
+
+        <!--telescopic_mobile_cranes images-->
+        <integer-array name="telescopic_cranes_icons">
+            <item>@drawable/telescopic</item>
+            <item>@drawable/telescopic</item>
+            <item>@drawable/telescopic</item>
+        </integer-array>
+
+        <integer-array name="truck_mounted_cranes_icons">
+            <item>@drawable/drilling</item>
+        </integer-array>
+
+
 
 
     <!--Maritime cranes Data-->
@@ -119,14 +136,33 @@
         <item>Knuckle Boom Crane</item>
     </string-array>
 
-    <!--ship cranes related images-->
-
-
     <string-array name="offshore_port_maritime_cranes">
         <item>Pedestal Crane</item>
     </string-array>
 
+    <!--ship cranes related images-->
+    <integer-array name="misc_port_maritime_icons">
+        <item>@drawable/pedestal</item>
+        <item>@drawable/pedestal</item>
+        <item>@drawable/pedestal</item>
+        <item>@drawable/pedestal</item>
+        <item>@drawable/pedestal</item>
+        <item>@drawable/pedestal</item>
+        <item>@drawable/pedestal</item>
+    </integer-array>
+
     <!--offshore cranes related images-->
+    <integer-array name="ship_port_maritime_icons">
+        <item>@drawable/pedestal</item>
+        <item>@drawable/pedestal</item>
+    </integer-array>
+
+    <integer-array name="offshore_port_maritime_icons">
+        <item>@drawable/pedestal</item>
+
+    </integer-array>
+
+
 
 
 
@@ -160,7 +196,6 @@
         <item>@drawable/clutch</item>
         <item>@drawable/block</item>
     </integer-array>
-
 
 
     <!--Slings Data Sets-->

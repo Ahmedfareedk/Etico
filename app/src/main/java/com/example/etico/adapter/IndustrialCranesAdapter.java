@@ -10,22 +10,22 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.etico.R;
 import com.example.etico.callback.OnRecyclerViewITemCLickListener;
-import com.example.etico.model.Crane;
+import com.example.etico.model.TrackingModel;
 
 import java.util.List;
 
 public class IndustrialCranesAdapter extends RecyclerView.Adapter<IndustrialCranesAdapter.IndustrialCranesViewHolder> {
-    private final List<Crane> industrialCranesList;
+    private final List<TrackingModel> industrialCranesList;
     private OnRecyclerViewITemCLickListener listener;
 
 
 
-    public IndustrialCranesAdapter(List<Crane> industrialCranesList, OnRecyclerViewITemCLickListener listener) {
+    public IndustrialCranesAdapter(List<TrackingModel> industrialCranesList, OnRecyclerViewITemCLickListener listener) {
         this.industrialCranesList = industrialCranesList;
         this.listener = listener;
     }
 
-    public IndustrialCranesAdapter(List<Crane> industrialCranesList) {
+    public IndustrialCranesAdapter(List<TrackingModel> industrialCranesList) {
         this.industrialCranesList = industrialCranesList;
     }
 
@@ -61,9 +61,9 @@ public class IndustrialCranesAdapter extends RecyclerView.Adapter<IndustrialCran
             craneImage = itemView.findViewById(R.id.industrial_crane_image_view);
             itemView.setOnClickListener(this);
         }
-        private void setCranesItems(Crane crane){
-            craneTitle.setText(crane.getCraneTitle());
-            craneImage.setImageResource(crane.getCraneImage());
+        private void setCranesItems(TrackingModel trackingModel){
+            craneTitle.setText(trackingModel.getTrackingItemTitle());
+            craneImage.setImageResource(trackingModel.getTrackingItemImage());
         }
 
         @Override

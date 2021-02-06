@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.wire_rope.WireRopeFragment">
+    tools:context=".view.wire_rope.WireRopeFragment">
 
     <LinearLayout
         android:id="@+id/layout_track_wire_rope_root"
